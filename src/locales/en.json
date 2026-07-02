@@ -1,0 +1,198 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "lang": "العربية"
+  },
+  "hero": {
+    "name": "Mohamed Ahmed Mohamed Naji Muthana",
+    "title1": "Cybersecurity Graduate Building",
+    "title2": "Secure Digital Products",
+    "subtitle": "I build useful web products, e-commerce systems, and business tools with a security-aware mindset. Based in Sana'a, Yemen.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "downloadCv": "Download CV",
+    "cvPath": "",
+    "cvComingSoon": "CV coming soon"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "I hold a Bachelor's degree in Cybersecurity from Al-Rasheed Smart University. I have hands-on experience building and connecting digital platforms, including e-commerce and inventory systems.",
+    "p2": "My interests span UI/UX, frontend development, cybersecurity, and overarching digital systems. I am currently open to opportunities in Yemen or remote roles where I can combine my design sensibilities with robust, secure technical implementations.",
+    "qualityNum": "Live E-commerce Project",
+    "quality": "Jouda Food Platform",
+    "secureTitle": "Connected Systems",
+    "secure": "Store + Inventory Workflow"
+  },
+  "whatIBuild": {
+    "title": "What I Build",
+    "subtitle": "Combining design, functionality, and security to create comprehensive digital solutions.",
+    "webTitle": "Web & E-commerce Systems",
+    "webDesc": "Modern, responsive storefronts and web applications focused on conversion and user experience.",
+    "invTitle": "Inventory & Business Tools",
+    "invDesc": "Integrated backend systems to manage stock, operations, and connect multiple branches.",
+    "cyberTitle": "Cybersecurity Analysis Projects",
+    "cyberDesc": "Tools and systems for static/dynamic analysis, threat intelligence, and vulnerability assessment."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "preview": "Project Preview",
+    "readCaseStudy": "Read Case Study",
+    "items": {
+      "jouda": {
+        "title": "Jouda Food",
+        "category": "E-commerce",
+        "description": "An e-commerce platform focused on helping users identify gluten-free products and shop from a curated food store.",
+        "image": "/jouda-food-en.png"
+      },
+      "inventory": {
+        "title": "Multi-Branch Inventory",
+        "category": "Business System",
+        "description": "A system created to manage inventory, products, and stock operations across multiple branches and connect with the online store.",
+        "image": "/inventory-dashboard-en.png"
+      },
+      "malware": {
+        "title": "Windows Malware Analysis",
+        "category": "Cybersecurity",
+        "description": "A cybersecurity project that analyzes suspicious Windows files through static analysis, dynamic analysis, and machine learning.",
+        "image": "/malware-dashboard-en.png"
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "How I can help you build and secure your next project.",
+    "discuss": "Let's Discuss Your Project",
+    "items": [
+      { "title": "Website and Landing Page Design", "description": "Creating beautiful, high-converting interfaces tailored to your brand." },
+      { "title": "E-commerce Store Setup", "description": "Building robust online stores with secure checkout and inventory management." },
+      { "title": "Inventory and Business System Design", "description": "Streamlining operations with custom tools that connect across your business." },
+      { "title": "UI/UX Interface Design", "description": "Designing intuitive user experiences with modern aesthetics." },
+      { "title": "Website Deployment and Domain Setup", "description": "Handling the technical details to get your project live securely." },
+      { "title": "Basic Website Security Practices", "description": "Implementing foundational security measures to protect your digital assets." }
+    ]
+  },
+  "skills": {
+    "title": "Skills & Tools",
+    "frontend": "Frontend & UI",
+    "cyber": "Cybersecurity",
+    "tools": "Development Tools",
+    "design": "Design",
+    "items": {
+      "frontend": ["React", "TypeScript", "Tailwind CSS", "HTML/CSS", "JavaScript", "UI Design Fundamentals", "Responsive Design"],
+      "cyber": ["Threat & Vulnerability Analysis", "Malware Analysis", "Static Analysis", "Dynamic Analysis", "Threat Intelligence", "Hack The Box", "TryHackMe"],
+      "tools": ["VS Code", "Cursor", "Git", "GitHub", "Vercel", "Namecheap", "AI Coding Tools"],
+      "design": ["Canva", "Photoshop Basics", "Logo Design Basics", "AI Design Tools"]
+    }
+  },
+  "experience": {
+    "title": "Experience & Education",
+    "practicalTitle": "Practical Experience",
+    "duration": "Duration: One Month",
+    "role": "Cybersecurity Trainee",
+    "company": "Deep Safer",
+    "desc": "Completed practical cybersecurity training with exposure to security concepts, technical workflows, and real-world cybersecurity environments.",
+    "educationTitle": "Education & Training",
+    "items": [
+      { "title": "Bachelor's Degree in Cybersecurity", "institution": "Al-Rasheed Smart University" },
+      { "title": "Threats and Vulnerability Analysis", "institution": "SecureWay" },
+      { "title": "Computer Driving License", "institution": "General Telecommunications Institute" },
+      { "title": "Customer Service, Business Mgt, Office Mgt & Personal Marketing", "institution": "Al-Rasheed Languages and Skills Center" },
+      { "title": "English Language Studies (Pre-Intermediate)", "institution": "Excel Institute" }
+    ]
+  },
+  "contact": {
+    "title": "Let’s build something useful together.",
+    "subtitle": "Open to remote opportunities and jobs in Yemen. Reach out to discuss projects, collaborations, or just to say hi.",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "locationLabel": "Location",
+    "locationValue": "Sana'a, Yemen",
+    "formName": "Name",
+    "formNamePH": "John Doe",
+    "formEmail": "Email",
+    "formEmailPH": "john@example.com",
+    "formSubject": "Subject",
+    "formSubjectPH": "Project Inquiry",
+    "formMessage": "Message",
+    "formMessagePH": "How can I help you?",
+    "formSubmit": "Send Message",
+    "formNotice": "Note: Submitting this form will open your email app with your message pre-filled. You can also write directly to mohammednaji.dev@gmail.com.",
+    "emailBodyName": "Name",
+    "emailBodyEmail": "Email",
+    "emailBodyMessage": "Message"
+  },
+  "footer": {
+    "desc": "Cybersecurity graduate building useful web products, e-commerce systems, and business tools with a security-aware mindset. Based in Sana'a, Yemen.",
+    "builtBy": "Built by Mohamed Naji",
+    "location": "Sana'a, Yemen",
+    "rights": "All rights reserved."
+  },
+  "notfound": {
+    "subtitle": "Page not found",
+    "desc": "The page you are looking for doesn't exist or has been moved.",
+    "return": "Return Home"
+  },
+  "caseStudy": {
+    "back": "Back to Home",
+    "visit": "Visit Project",
+    "placeholder": "Project Visual Placeholder",
+    "notFound": "Case Study Not Found",
+    "return": "Return to Projects",
+    "problem": "The Problem",
+    "goal": "The Goal",
+    "role": "My Role",
+    "solution": "The Solution",
+    "features": "Main Features",
+    "tech": "Tools & Technologies",
+    "challenges": "Challenges",
+    "outcome": "Outcome & Impact",
+    "lessons": "What I Learned"
+  },
+  "caseStudiesData": {
+    "jouda-food": {
+      "title": "Jouda Food",
+      "image": "/jouda-food-en.png",
+      "category": "E-commerce Platform",
+      "problem": "Users needed a way to reliably identify gluten-free products and shop from a curated food store without confusion.",
+      "goal": "Build an accessible, user-friendly e-commerce platform dedicated to gluten-free foods, ensuring clear product categorization and smooth checkout.",
+      "role": "Full-stack Developer & Platform Manager. I built and managed the platform, designed customer-facing interfaces, organized products and workflows, connected the store with an inventory management system, and helped deploy and maintain the platform.",
+      "solution": "Developed a modern storefront tailored for gluten-free product discovery. Integrated seamless navigation, robust search filtering, and clear product labeling.",
+      "features": ["Curated Gluten-Free Catalog", "Inventory System Integration", "Custom UI/UX Design", "Secure Checkout Workflow"],
+      "tech": ["React", "Tailwind CSS", "E-commerce APIs", "Inventory Backend"],
+      "challenges": "Synchronizing the online catalog with the physical inventory in real-time to avoid selling out-of-stock items, and designing a clear classification system for varying dietary restrictions.",
+      "outcome": "Successfully launched the platform, providing a reliable shopping hub for customers with specific dietary needs, supported by a stable and synchronized backend.",
+      "lessons": "Learned the importance of deep integration between e-commerce frontends and inventory backends, and how vital clear UI communication is for niche markets."
+    },
+    "inventory-system": {
+      "title": "Multi-Branch Inventory Management System",
+      "image": "/inventory-dashboard-en.png",
+      "category": "Business System",
+      "problem": "Managing inventory, products, and stock operations across multiple business branches was highly manual, leading to discrepancies between physical stock and the online store.",
+      "goal": "Design and implement a centralized inventory management system capable of supporting multiple branches and syncing seamlessly with an e-commerce platform.",
+      "role": "System Designer & Integrator. I designed inventory workflows, connected the system with the e-commerce platform, supported database integration, and organized stock and product management processes.",
+      "solution": "Created a centralized dashboard that tracks stock levels across all physical branches and automatically reflects these numbers on the online storefront.",
+      "features": ["Multi-Branch Tracking", "E-commerce Synchronization", "Real-time Stock Updates", "Database Integration"],
+      "tech": ["Database Management Systems", "API Integration", "Backend Logic Design"],
+      "challenges": "Handling race conditions during high-volume sales where both physical and online purchases occur simultaneously.",
+      "outcome": "Streamlined inventory workflows, significantly reducing out-of-stock errors and administrative overhead for branch managers.",
+      "lessons": "Gained practical experience in designing robust database schemas for complex business operations and handling cross-system synchronization."
+    },
+    "malware-analysis": {
+      "title": "Windows Malware Analysis System",
+      "image": "/malware-dashboard-en.png",
+      "category": "Cybersecurity",
+      "problem": "Relying on a single method of malware detection often leaves gaps, allowing sophisticated threats to bypass security measures.",
+      "goal": "Develop an integrated cybersecurity project for analyzing suspicious Windows files through multiple detection methodologies.",
+      "role": "System Architect & Security Analyst. I designed the overall system workflow, integrated multiple analysis approaches, and worked on malware detection and threat assessment concepts.",
+      "solution": "Built a comprehensive analysis pipeline that subjects suspicious files to static, dynamic, and machine learning-based assessments, cross-referenced with threat intelligence feeds.",
+      "features": ["Static Analysis", "Dynamic Analysis", "Machine Learning Evaluation", "Threat Intelligence Integration"],
+      "tech": ["Python", "Virtual Environments", "ML Models", "Threat Feeds"],
+      "challenges": "Safely executing and monitoring dynamic analysis without exposing the host system, and tuning the ML models to reduce false positives.",
+      "outcome": "Created a robust, multi-layered detection system capable of identifying complex malware that would otherwise evade basic signature-based scanners.",
+      "lessons": "Learned how different analysis techniques complement each other, and gained deep insights into Windows internals and malware evasion tactics."
+    }
+  }
+}
