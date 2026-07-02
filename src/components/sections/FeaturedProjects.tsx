@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { Badge } from '../ui/Badge';
+import { DeviceMockup } from '../ui/DeviceMockup';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -15,6 +16,7 @@ export function FeaturedProjects() {
       category: t('projects.items.jouda.category'),
       description: t('projects.items.jouda.description'),
       image: "/jouda-food.jpg",
+      mockup: 'phone' as const,
       color: "from-orange-500/20 to-red-500/20"
     },
     {
@@ -23,6 +25,7 @@ export function FeaturedProjects() {
       category: t('projects.items.inventory.category'),
       description: t('projects.items.inventory.description'),
       image: "/inventory-dashboard.jpg",
+      mockup: 'phone' as const,
       color: "from-primary-500/20 to-blue-600/20"
     },
     {
@@ -31,6 +34,7 @@ export function FeaturedProjects() {
       category: t('projects.items.malware.category'),
       description: t('projects.items.malware.description'),
       image: "/malware-dashboard.jpg",
+      mockup: 'browser' as const,
       color: "from-accent-green/20 to-emerald-600/20"
     }
   ];
@@ -61,19 +65,31 @@ export function FeaturedProjects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="glass-card group cursor-pointer flex flex-col h-full"
             >
-              <div className="relative h-48 overflow-hidden rounded-t-2xl">
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} z-10 opacity-60 mix-blend-overlay group-hover:opacity-40 transition-opacity duration-300`}></div>
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-4 start-4 z-20">
-                  <Badge variant="accent">{project.category}</Badge>
+              {/* Project preview with device mockup */}
+              <div className={`relative overflow-hidden rounded-t-2xl bg-gradient-to-br ${project.color} p-4 sm:p-6`}>
+                <div className="flex justify-center">
+                  {project.mockup === 'phone' ? (
+                    <DeviceMockup
+                      src={project.image}
+                      alt={project.title}
+                      variant="phone"
+                      size="sm"
+                    />
+                  ) : (
+                    <DeviceMockup
+                      src={project.image}
+                      alt={project.title}
+                      variant="browser"
+                      size="sm"
+                    />
+                  )}
                 </div>
               </div>
               
               <div className="p-4 sm:p-6 flex flex-col flex-grow">
+                <div className="mb-3">
+                  <Badge variant="accent">{project.category}</Badge>
+                </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors">
                   {project.title}
                 </h3>

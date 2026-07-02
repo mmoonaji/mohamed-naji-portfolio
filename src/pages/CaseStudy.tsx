@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { ArrowLeft, ArrowRight, ExternalLink, Code2 } from 'lucide-react';
 import { Badge } from '../components/ui/Badge';
 import { Button } from '../components/ui/Button';
+import { DeviceMockup } from '../components/ui/DeviceMockup';
 import { useTranslation } from 'react-i18next';
 
 export function CaseStudy() {
@@ -10,7 +11,12 @@ export function CaseStudy() {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.language === 'ar';
 
-
+  // Define mockup type per project
+  const projectConfig: Record<string, { mockup: 'phone' | 'browser' }> = {
+    'jouda-food': { mockup: 'phone' },
+    'inventory-system': { mockup: 'phone' },
+    'malware-analysis': { mockup: 'browser' },
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,13 +36,14 @@ export function CaseStudy() {
     );
   }
 
-  const image = study.image || "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80";
+  const image = study.image || `/jouda-food.jpg`;
+  const config = projectConfig[id || ''] || { mockup: 'browser' };
 
   return (
     <article className="pt-24 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-8 sm:mb-12">
           <Link to="/#projects" className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors mb-8">
             {isRtl ? <ArrowRight size={18} /> : <ArrowLeft size={18} />} {t('caseStudy.back')}
           </Link>
@@ -56,58 +63,63 @@ export function CaseStudy() {
           </div>
         </div>
 
-        {/* Hero Image */}
-        <div className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] min-h-[250px] sm:min-h-[300px] md:min-h-[400px] rounded-2xl sm:rounded-3xl overflow-hidden mb-8 sm:mb-12 md:mb-16 border border-white/10 relative">
-          <img 
-            src={image} 
-            alt={study.title} 
-            className="w-full h-full object-cover"
+        {/* Hero Image with Device Mockup */}
+        <div className={`w-full rounded-2xl sm:rounded-3xl overflow-hidden mb-8 sm:mb-12 md:mb-16 border border-white/10 relative ${
+          config.mockup === 'phone'
+            ? 'bg-gradient-to-br from-dark-700/50 to-dark-800/80 p-6 sm:p-8 md:p-12 flex justify-center items-center'
+            : 'bg-dark-800/50'
+        }`}>
+          <DeviceMockup
+            src={image}
+            alt={study.title}
+            variant={config.mockup}
+            size="lg"
           />
         </div>
 
         {/* Content */}
         <div className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
           {/* Main Content */}
-          <div className="md:col-span-2 space-y-12">
+          <div className="md:col-span-2 space-y-8 sm:space-y-12">
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">{t('caseStudy.problem')}</h2>
-              <p className="text-slate-300 leading-relaxed text-lg">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.problem')}</h2>
+              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
                 {study.problem}
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">{t('caseStudy.goal')}</h2>
-              <p className="text-slate-300 leading-relaxed text-lg">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.goal')}</h2>
+              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
                 {study.goal}
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">{t('caseStudy.solution')}</h2>
-              <p className="text-slate-300 leading-relaxed text-lg">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.solution')}</h2>
+              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
                 {study.solution}
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">{t('caseStudy.challenges')}</h2>
-              <p className="text-slate-300 leading-relaxed text-lg">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.challenges')}</h2>
+              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
                 {study.challenges}
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-white mb-4">{t('caseStudy.outcome')}</h2>
-              <p className="text-slate-300 leading-relaxed text-lg">
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.outcome')}</h2>
+              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
                 {study.outcome}
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-accent-green mb-4">{t('caseStudy.lessons')}</h2>
-              <div className="glass-card p-6 border-accent-green/20">
-                <p className="text-slate-300 leading-relaxed text-lg">
+              <h2 className="text-xl sm:text-2xl font-bold text-accent-green mb-3 sm:mb-4">{t('caseStudy.lessons')}</h2>
+              <div className="glass-card p-4 sm:p-6 border-accent-green/20">
+                <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
                   {study.lessons}
                 </p>
               </div>
@@ -115,13 +127,13 @@ export function CaseStudy() {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-8">
-            <div className="glass-card p-6">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="glass-card p-4 sm:p-6">
               <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">{t('caseStudy.role')}</h3>
               <p className="text-slate-200">{study.role}</p>
             </div>
 
-            <div className="glass-card p-6">
+            <div className="glass-card p-4 sm:p-6">
               <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">{t('caseStudy.features')}</h3>
               <ul className="space-y-3">
                 {(study.features || []).map((feature: string, index: number) => (
@@ -133,7 +145,7 @@ export function CaseStudy() {
               </ul>
             </div>
 
-            <div className="glass-card p-6">
+            <div className="glass-card p-4 sm:p-6">
               <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">{t('caseStudy.tech')}</h3>
               <div className="flex flex-wrap gap-2">
                 {(study.tech || []).map((tech: string, index: number) => (
