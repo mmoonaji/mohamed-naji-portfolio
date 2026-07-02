@@ -33,7 +33,7 @@ export function Navbar() {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-dark-900/90 backdrop-blur-md border-b border-white/10 py-4' : 'bg-transparent py-6'}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
         <Link to="/" className="text-xl font-bold tracking-tighter text-white">
           Mohamed<span className="text-primary-500">.</span>
         </Link>
@@ -69,14 +69,14 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full start-0 w-full bg-dark-800 border-b border-white/10 p-6 flex flex-col gap-4 shadow-xl">
+        <div className="md:hidden absolute top-full start-0 w-full bg-dark-800/95 backdrop-blur-md border-b border-white/10 p-4 sm:p-6 flex flex-col gap-3 sm:gap-4 shadow-xl">
           {navLinks.map((link) => (
              isHome ? (
-               <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-base font-medium text-slate-300 hover:text-white py-2">
+               <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-base font-medium text-slate-300 hover:text-white py-3 active:text-primary-400">
                  {link.name}
                </a>
              ) : (
-               <Link key={link.name} to={link.href} onClick={() => setIsOpen(false)} className="text-base font-medium text-slate-300 hover:text-white py-2">
+               <Link key={link.name} to={link.href} onClick={() => setIsOpen(false)} className="text-base font-medium text-slate-300 hover:text-white py-3 active:text-primary-400">
                  {link.name}
                </Link>
              )

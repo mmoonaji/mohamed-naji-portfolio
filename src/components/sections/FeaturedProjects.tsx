@@ -36,14 +36,14 @@ export function FeaturedProjects() {
   ];
 
   return (
-    <section id="projects" className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="projects" className="py-12 sm:py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-16 flex items-center justify-between"
+          className="mb-8 sm:mb-12 md:mb-16 flex items-center justify-between"
         >
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('projects.title')}</h2>
@@ -51,7 +51,7 @@ export function FeaturedProjects() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -73,7 +73,7 @@ export function FeaturedProjects() {
                 </div>
               </div>
               
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-4 sm:p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors">
                   {project.title}
                 </h3>

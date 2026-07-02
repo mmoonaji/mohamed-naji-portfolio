@@ -39,20 +39,20 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-dark-800/30">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="services" className="py-12 sm:py-16 md:py-24 bg-dark-800/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('services.title')}</h2>
           <p className="text-slate-400 max-w-2xl mx-auto">{t('services.subtitle')}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}

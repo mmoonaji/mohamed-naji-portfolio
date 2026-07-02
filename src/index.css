@@ -52,8 +52,19 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
-  @apply bg-dark-900 text-slate-300 font-sans antialiased selection:bg-primary-500/30 selection:text-white min-h-screen overflow-x-hidden;
+  @apply bg-dark-900 text-slate-300 font-sans antialiased selection:bg-primary-500/30 selection:text-white min-h-screen;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#root {
+  overflow-x: hidden;
+  min-width: 0;
 }
 
 /* Custom Scrollbar */

@@ -10,10 +10,10 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background gradients */}
-      <div className="absolute top-1/4 start-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/4 end-1/4 w-96 h-96 bg-accent-purple/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/4 start-1/4 w-48 h-48 md:w-96 md:h-96 bg-primary-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-1/4 end-1/4 w-48 h-48 md:w-96 md:h-96 bg-accent-purple/10 rounded-full blur-[100px] pointer-events-none" />
       
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export function Hero() {
           </motion.div>
           
           <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight text-white"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tight text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -36,7 +36,7 @@ export function Hero() {
           </motion.h1>
           
           <motion.p 
-            className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-slate-400 mb-6 sm:mb-10 max-w-2xl leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -45,7 +45,7 @@ export function Hero() {
           </motion.p>
           
           <motion.div 
-            className="flex flex-wrap gap-4"
+            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}

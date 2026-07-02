@@ -9,20 +9,20 @@ export function Experience() {
   const education = (t('experience.items', { returnObjects: true }) as { title: string, institution: string }[]) || [];
 
   return (
-    <section className="py-24 bg-dark-800/30">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-12 sm:py-16 md:py-24 bg-dark-800/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('experience.title')}</h2>
           <div className="w-20 h-1 bg-primary-500 rounded-full"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Practical Experience */}
           <div>
             <div className="flex items-center gap-3 mb-8">

@@ -34,7 +34,7 @@ export function CaseStudy() {
 
   return (
     <article className="pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="mb-12">
           <Link to="/#projects" className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors mb-8">
@@ -43,7 +43,7 @@ export function CaseStudy() {
           <div className="mb-6">
             <Badge variant="accent">{study.category}</Badge>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
             {study.title}
           </h1>
           <div className="flex flex-wrap gap-4">
@@ -57,7 +57,7 @@ export function CaseStudy() {
         </div>
 
         {/* Hero Image */}
-        <div className="w-full h-[60vh] min-h-[400px] rounded-3xl overflow-hidden mb-16 border border-white/10 relative">
+        <div className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] min-h-[250px] sm:min-h-[300px] md:min-h-[400px] rounded-2xl sm:rounded-3xl overflow-hidden mb-8 sm:mb-12 md:mb-16 border border-white/10 relative">
           <img 
             src={image} 
             alt={study.title} 
@@ -66,7 +66,7 @@ export function CaseStudy() {
         </div>
 
         {/* Content */}
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
           {/* Main Content */}
           <div className="md:col-span-2 space-y-12">
             <section>

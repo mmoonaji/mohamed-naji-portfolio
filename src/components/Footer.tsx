@@ -5,8 +5,8 @@ export function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-dark-900 py-12 border-t border-white/5 relative z-10">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-dark-900 py-8 sm:py-12 border-t border-white/5 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-start">
             <Link to="/" className="text-xl font-bold tracking-tighter text-white mb-2 block">

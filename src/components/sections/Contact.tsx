@@ -22,20 +22,20 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="contact" className="py-12 sm:py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t('contact.title')}</h2>
           <p className="text-slate-400 max-w-2xl mx-auto">{t('contact.subtitle')}</p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -50,7 +50,7 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-sm text-slate-400 mb-1">{t('contact.emailLabel')}</p>
-                <a href="mailto:mohammednaji.dev@gmail.com" className="text-lg font-medium text-white hover:text-primary-400 transition-colors">
+                <a href="mailto:mohammednaji.dev@gmail.com" className="text-sm sm:text-base md:text-lg font-medium text-white hover:text-primary-400 transition-colors break-all sm:break-normal">
                   mohammednaji.dev@gmail.com
                 </a>
               </div>
@@ -62,7 +62,7 @@ export function Contact() {
               </div>
               <div>
                 <p className="text-sm text-slate-400 mb-1">{t('contact.githubLabel')}</p>
-                <a href="https://github.com/mmoonaji" target="_blank" rel="noopener noreferrer" className="text-lg font-medium text-white hover:text-accent-purple transition-colors">
+                <a href="https://github.com/mmoonaji" target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base md:text-lg font-medium text-white hover:text-accent-purple transition-colors">
                   github.com/mmoonaji
                 </a>
               </div>
@@ -88,7 +88,7 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <form className="glass-card p-8 space-y-6" onSubmit={handleSubmit}>
+            <form className="glass-card p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-slate-300">{t('contact.formName')}</label>
