@@ -45,19 +45,19 @@
         "title": "Jouda Food",
         "category": "E-commerce",
         "description": "An e-commerce platform focused on helping users identify gluten-free products and shop from a curated food store.",
-        "image": "/jouda-food-en.png"
+        "image": "/jouda-food-en.jpg"
       },
       "inventory": {
         "title": "Multi-Branch Inventory",
         "category": "Business System",
         "description": "A system created to manage inventory, products, and stock operations across multiple branches and connect with the online store.",
-        "image": "/inventory-dashboard-en.png"
+        "image": "/inventory-dashboard-en.jpg"
       },
       "malware": {
         "title": "Windows Malware Analysis",
         "category": "Cybersecurity",
         "description": "A cybersecurity project that analyzes suspicious Windows files through static analysis, dynamic analysis, and machine learning.",
-        "image": "/malware-dashboard-en.png"
+        "image": "/malware-dashboard-en.jpg"
       }
     }
   },
@@ -154,7 +154,7 @@
   "caseStudiesData": {
     "jouda-food": {
       "title": "Jouda Food",
-      "image": "/jouda-food-en.png",
+      "image": "/jouda-food-en.jpg",
       "category": "E-commerce Platform",
       "problem": "Users needed a way to reliably identify gluten-free products and shop from a curated food store without confusion.",
       "goal": "Build an accessible, user-friendly e-commerce platform dedicated to gluten-free foods, ensuring clear product categorization and smooth checkout.",
@@ -168,7 +168,7 @@
     },
     "inventory-system": {
       "title": "Multi-Branch Inventory Management System",
-      "image": "/inventory-dashboard-en.png",
+      "image": "/inventory-dashboard-en.jpg",
       "category": "Business System",
       "problem": "Managing inventory, products, and stock operations across multiple business branches was highly manual, leading to discrepancies between physical stock and the online store.",
       "goal": "Design and implement a centralized inventory management system capable of supporting multiple branches and syncing seamlessly with an e-commerce platform.",
@@ -182,7 +182,7 @@
     },
     "malware-analysis": {
       "title": "Windows Malware Analysis System",
-      "image": "/malware-dashboard-en.png",
+      "image": "/malware-dashboard-en.jpg",
       "category": "Cybersecurity",
       "problem": "Relying on a single method of malware detection often leaves gaps, allowing sophisticated threats to bypass security measures.",
       "goal": "Develop an integrated cybersecurity project for analyzing suspicious Windows files through multiple detection methodologies.",

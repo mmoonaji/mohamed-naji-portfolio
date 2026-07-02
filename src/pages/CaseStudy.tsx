@@ -10,11 +10,7 @@ export function CaseStudy() {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.language === 'ar';
 
-  const images: Record<string, string> = {
-    'jouda-food': "/jouda-food.jpg",
-    'inventory-system': "/inventory-dashboard.jpg",
-    'malware-analysis': "/malware-dashboard.jpg"
-  };
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
