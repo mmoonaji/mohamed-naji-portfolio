@@ -11,9 +11,9 @@ export function CaseStudy() {
   const isRtl = i18n.language === 'ar';
 
   const images: Record<string, string> = {
-    'jouda-food': "/jouda-food.webp",
-    'inventory-system': "/inventory-dashboard.webp",
-    'malware-analysis': "/malware-dashboard.webp"
+    'jouda-food': "/jouda-food.jpg",
+    'inventory-system': "/inventory-dashboard.jpg",
+    'malware-analysis': "/malware-dashboard.jpg"
   };
 
   useEffect(() => {
