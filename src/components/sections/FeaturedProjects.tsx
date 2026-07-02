@@ -14,7 +14,7 @@ export function FeaturedProjects() {
       title: t('projects.items.jouda.title'),
       category: t('projects.items.jouda.category'),
       description: t('projects.items.jouda.description'),
-      image: t('projects.items.jouda.image'),
+      image: "/jouda-food.webp",
       color: "from-orange-500/20 to-red-500/20"
     },
     {
@@ -22,7 +22,7 @@ export function FeaturedProjects() {
       title: t('projects.items.inventory.title'),
       category: t('projects.items.inventory.category'),
       description: t('projects.items.inventory.description'),
-      image: t('projects.items.inventory.image'),
+      image: "/inventory-dashboard.webp",
       color: "from-primary-500/20 to-blue-600/20"
     },
     {
@@ -30,7 +30,7 @@ export function FeaturedProjects() {
       title: t('projects.items.malware.title'),
       category: t('projects.items.malware.category'),
       description: t('projects.items.malware.description'),
-      image: t('projects.items.malware.image'),
+      image: "/malware-dashboard.webp",
       color: "from-accent-green/20 to-emerald-600/20"
     }
   ];
