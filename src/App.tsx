@@ -34,7 +34,7 @@ function App() {
         {/* Floating Language Toggle */}
         <button
           onClick={toggleLanguage}
-          className="fixed z-50 flex items-center justify-center rounded-full bg-app-card border border-app-border text-app-muted shadow-lg transition-all active:scale-95 size-11 sm:size-12 hover:text-app-text hover:border-app-muted"
+          className="fixed z-50 flex items-center justify-center rounded-full bg-app-card/80 backdrop-blur-md border border-app-border/50 text-app-muted shadow-xl transition-all active:scale-95 size-11 sm:size-12 hover:text-app-text hover:border-app-muted hover:bg-app-card focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50"
           style={{ 
             bottom: 'max(1.5rem, env(safe-area-inset-bottom))',
             right: 'max(1.5rem, env(safe-area-inset-right))'

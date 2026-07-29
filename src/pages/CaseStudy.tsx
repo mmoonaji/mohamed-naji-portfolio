@@ -33,7 +33,7 @@ export function CaseStudy() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="mb-16">
-          <Link to="/#projects" className="inline-block py-3 px-1 -mx-1 text-sm font-normal text-muted hover:text-white transition-colors mb-12 active:scale-95">
+          <Link to="/#projects" className="inline-block py-3 px-1 -mx-1 text-sm font-normal text-muted hover:text-white transition-colors mb-12 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 rounded">
             {isRtl ? '→' : '←'} {t('caseStudy.back')}
           </Link>
           
@@ -45,7 +45,7 @@ export function CaseStudy() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-8 leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-white mb-8 leading-tight"
           >
             {study.title}
           </motion.h1>
@@ -57,7 +57,7 @@ export function CaseStudy() {
             className="flex flex-wrap gap-6"
           >
             {study.url && (
-              <a href={study.url} target="_blank" rel="noopener noreferrer" className="inline-block py-3 px-1 -mx-1 text-base font-normal text-white link-underline pb-0.5 active:scale-95">
+              <a href={study.url} target="_blank" rel="noopener noreferrer" className="inline-block py-3 px-1 -mx-1 text-base font-normal text-white link-underline pb-0.5 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 rounded">
                 {t('caseStudy.visit')}
               </a>
             )}
@@ -159,14 +159,14 @@ export function CaseStudy() {
         
         {/* Footer Navigation */}
         <div className="mt-24 pt-12 border-t border-subtle flex flex-wrap justify-between items-center gap-6">
-           <Link to="/#projects" className="inline-block py-3 px-1 -mx-1 text-base font-normal text-white link-underline pb-0.5 active:scale-95">
+           <Link to="/#projects" className="inline-block py-3 px-1 -mx-1 text-base font-normal text-white link-underline pb-0.5 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 rounded">
              {isRtl ? '→' : '←'} {t('caseStudy.return')}
            </Link>
            <a 
               href={`https://wa.me/967770859270?text=${encodeURIComponent(study.title)}`}
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-base font-normal text-muted hover:text-white transition-colors"
+              className="inline-block py-3 px-1 -mx-1 text-base font-normal text-muted hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 rounded"
            >
               ناقش مشروعاً مشابهاً
            </a>

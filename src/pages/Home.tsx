@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { Mail, ArrowUpRight } from 'lucide-react';
 
 export function Home() {
@@ -54,7 +55,12 @@ export function Home() {
     <main className="max-w-[640px] mx-auto px-6 py-12 sm:px-8 sm:py-16 min-h-[calc(100svh-6rem)] flex flex-col gap-16">
       
       {/* Header */}
-      <header className="flex items-center gap-5 pt-4 sm:pt-8">
+      <motion.header 
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center gap-5 pt-4 sm:pt-8"
+      >
         <div className="size-14 sm:size-16 rounded-lg bg-app-card border border-app-border overflow-hidden shrink-0 flex items-center justify-center">
           {/* Avatar placeholder - user can replace /avatar.jpg */}
           <img 
@@ -72,11 +78,16 @@ export function Home() {
           <h1 className="text-lg font-medium text-app-text mb-0.5">{t('hero.name')}</h1>
           <p className="text-sm font-normal text-app-muted">{isRtl ? 'مطور واجهات أمامية' : 'Frontend Developer'}</p>
         </hgroup>
-      </header>
+      </motion.header>
 
       {/* About Section */}
-      <section className="space-y-4">
-        <h2 className="text-base font-semibold text-app-text">{t('about.title')}</h2>
+      <motion.section 
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="space-y-4"
+      >
+        <h2 className="text-base font-semibold tracking-tight text-app-text">{t('about.title')}</h2>
         <div className="space-y-3">
           <p className="text-base font-medium leading-7 text-app-muted text-pretty">
             {t('about.p1')}
@@ -95,18 +106,23 @@ export function Home() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.label}
-              className="inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent size-11 sm:size-10 text-app-muted hover:text-app-text hover:border-app-border transition-colors active:scale-95"
+              className="inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent size-11 sm:size-10 text-app-muted hover:text-app-text hover:border-app-border transition-colors active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50"
             >
               {link.icon}
             </a>
           ))}
         </nav>
-      </section>
+      </motion.section>
 
       {/* Projects Section */}
-      <section className="space-y-5" id="projects">
+      <motion.section 
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="space-y-5" id="projects"
+      >
         <div className="flex items-center justify-between gap-4">
-          <h2 className="text-base font-semibold text-app-text">{t('projects.title')}</h2>
+          <h2 className="text-base font-semibold tracking-tight text-app-text">{t('projects.title')}</h2>
         </div>
         
         <div className="grid sm:grid-cols-2 gap-x-6 gap-y-8">
@@ -114,7 +130,7 @@ export function Home() {
             <Link 
               key={project.id} 
               to={`/case-study/${project.id}`}
-              className="group block outline-none cursor-pointer"
+              className="group block outline-none cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 rounded-lg"
             >
               <div className="flex flex-col gap-3">
                 <div className="relative aspect-[3/2] overflow-hidden rounded-lg bg-app-card border border-app-border">
@@ -140,11 +156,16 @@ export function Home() {
             </Link>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* My Approach / Services Section mapped to "whatIBuild" or "services" */}
-      <section className="space-y-4">
-        <h2 className="text-base font-semibold text-app-text">{t('services.title')}</h2>
+      <motion.section 
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="space-y-4"
+      >
+        <h2 className="text-base font-semibold tracking-tight text-app-text">{t('services.title')}</h2>
         <div className="space-y-3">
           <p className="text-base font-medium leading-7 text-app-muted text-pretty">
             {t('services.subtitle')}
@@ -158,7 +179,7 @@ export function Home() {
             ))}
           </ul>
         </div>
-      </section>
+      </motion.section>
 
     </main>
   );
