@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Shield } from 'lucide-react';
 
 export function CaseStudy() {
   const { id } = useParams();
@@ -26,7 +27,7 @@ export function CaseStudy() {
     );
   }
 
-  const image = study.image || `/jouda-food.jpg`;
+  const image = study.image;
 
   return (
     <article className="pt-32 pb-24">
@@ -73,24 +74,36 @@ export function CaseStudy() {
           className="w-full mb-16 sm:mb-24"
         >
           {study.layout === 'desktop' ? (
-            <div className="relative w-full aspect-video sm:aspect-[21/9] overflow-hidden rounded-2xl border border-app-border">
-              <img 
-                src={image} 
-                alt={study.title}
-                fetchPriority="high"
-                className="w-full h-full object-cover touch-colorful hover:scale-[1.03] transition-transform duration-700 ease-out motion-reduce:transform-none"
-                onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-              />
+            <div className="relative aspect-[21/9] sm:aspect-[2.5/1] overflow-hidden rounded-2xl border border-app-border bg-slate-50 dark:bg-app-card">
+              {image ? (
+                <img 
+                  src={image} 
+                  alt={study.title}
+                  fetchPriority="high"
+                  className="w-full h-full object-cover touch-colorful hover:scale-[1.03] transition-transform duration-700 ease-out motion-reduce:transform-none"
+                  onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <Shield className="size-20 sm:size-24 text-app-border" />
+                </div>
+              )}
             </div>
           ) : (
-            <div className="relative w-full aspect-[4/3] sm:aspect-[21/9] overflow-hidden rounded-2xl bg-slate-50 dark:bg-app-card border border-slate-200 dark:border-app-border flex items-start justify-center pt-10 sm:pt-16 transition-colors duration-300">
-              <img 
-                src={image} 
-                alt={study.title}
-                fetchPriority="high"
-                className="w-[50%] sm:w-[25%] h-auto object-cover rounded-t-[1.5rem] shadow-[0_-8px_30px_rgb(0,0,0,0.15)] dark:shadow-[0_-8px_30px_rgb(0,0,0,0.5)] ring-1 ring-black/5 dark:ring-white/10 touch-colorful hover:-translate-y-4 transition-all duration-700 ease-out motion-reduce:transform-none"
-                onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-              />
+            <div className="relative aspect-[4/3] sm:aspect-[2.5/1] overflow-hidden rounded-2xl bg-slate-50 dark:bg-app-card border border-slate-200 dark:border-app-border flex items-end justify-center px-4 sm:px-0">
+              {image ? (
+                <img 
+                  src={image} 
+                  alt={study.title}
+                  fetchPriority="high"
+                  className="w-[50%] sm:w-[25%] h-auto object-cover rounded-t-[1.5rem] shadow-[0_-8px_30px_rgb(0,0,0,0.15)] dark:shadow-[0_-8px_30px_rgb(0,0,0,0.5)] ring-1 ring-black/5 dark:ring-white/10 touch-colorful hover:-translate-y-4 transition-all duration-700 ease-out motion-reduce:transform-none"
+                  onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center pb-8 sm:pb-12">
+                  <Shield className="size-20 sm:size-24 text-app-border hover:-translate-y-4 transition-transform duration-700 ease-out motion-reduce:transform-none" />
+                </div>
+              )}
             </div>
           )}
         </motion.div>

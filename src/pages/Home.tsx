@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Mail, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight, Shield } from 'lucide-react';
 
 export function Home() {
   const location = useLocation();
@@ -60,12 +60,12 @@ export function Home() {
         transition={{ duration: 0.5 }}
         className="flex items-center gap-5 pt-4 sm:pt-8"
       >
-        <div className="size-14 sm:size-16 rounded-lg bg-app-card border border-app-border overflow-hidden shrink-0 flex items-center justify-center">
+        <div className="size-14 sm:size-16 rounded-2xl bg-app-card border border-app-border overflow-hidden shrink-0 flex items-center justify-center">
           {/* Avatar placeholder - user can replace /avatar.jpg */}
           <img 
             src="/image.webp" 
             alt="Mohamed Naji" 
-            className="w-full h-full object-cover grayscale contrast-125"
+            className="w-full h-full object-cover"
             onError={(e) => {
                // Fallback if image doesn't exist yet
                (e.target as HTMLElement).style.display = 'none';
@@ -133,23 +133,35 @@ export function Home() {
               <div className="flex flex-col gap-4">
                 {project.layout === 'desktop' ? (
                   <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-app-border">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      loading="lazy"
-                      className="w-full h-full object-cover touch-colorful group-hover:scale-[1.03] transition-transform duration-700 ease-out motion-reduce:transform-none"
-                      onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-                    />
+                    {project.image ? (
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        loading="lazy"
+                        className="w-full h-full object-cover touch-colorful group-hover:scale-[1.03] transition-transform duration-700 ease-out motion-reduce:transform-none"
+                        onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-slate-50 dark:bg-app-card group-hover:bg-app-border/50 transition-colors duration-500">
+                        <Shield className="size-16 text-app-muted group-hover:text-sky-500 transition-colors duration-500" />
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div className="relative aspect-[3/2] overflow-hidden rounded-2xl bg-slate-50 dark:bg-app-card border border-slate-200 dark:border-app-border flex items-start justify-center pt-8 sm:pt-10 transition-colors duration-300">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      loading="lazy"
-                      className="w-[60%] sm:w-[55%] h-auto object-cover rounded-t-[1.5rem] shadow-[0_-8px_30px_rgb(0,0,0,0.15)] dark:shadow-[0_-8px_30px_rgb(0,0,0,0.4)] ring-1 ring-black/5 dark:ring-white/10 touch-colorful group-hover:-translate-y-3 transition-all duration-700 ease-out motion-reduce:transform-none"
-                      onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-                    />
+                    {project.image ? (
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        loading="lazy"
+                        className="w-[60%] sm:w-[55%] h-auto object-cover rounded-t-[1.5rem] shadow-[0_-8px_30px_rgb(0,0,0,0.15)] dark:shadow-[0_-8px_30px_rgb(0,0,0,0.4)] ring-1 ring-black/5 dark:ring-white/10 touch-colorful group-hover:-translate-y-3 transition-all duration-700 ease-out motion-reduce:transform-none"
+                        onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center pb-8 sm:pb-10">
+                        <Shield className="size-16 text-app-muted group-hover:text-sky-500 group-hover:-translate-y-2 transition-all duration-500 motion-reduce:transform-none" />
+                      </div>
+                    )}
                   </div>
                 )}
                 <div className="flex flex-col gap-1 px-1">
