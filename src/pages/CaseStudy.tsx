@@ -1,22 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import { ArrowLeft, ArrowRight, ExternalLink, Code2 } from 'lucide-react';
-import { Badge } from '../components/ui/Badge';
-import { Button } from '../components/ui/Button';
-import { DeviceMockup } from '../components/ui/DeviceMockup';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 export function CaseStudy() {
   const { id } = useParams();
   const { t, i18n } = useTranslation();
   const isRtl = i18n.language === 'ar';
-
-  // Define mockup type per project
-  const projectConfig: Record<string, { mockup: 'phone' | 'browser' }> = {
-    'jouda-food': { mockup: 'phone' },
-    'inventory-system': { mockup: 'phone' },
-    'malware-analysis': { mockup: 'browser' },
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,133 +17,159 @@ export function CaseStudy() {
 
   if (!study || !study.title) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center pt-20 px-6 text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">{t('caseStudy.notFound')}</h2>
-        <Button to="/#projects" variant="primary">
-          {isRtl ? <ArrowRight size={18} /> : <ArrowLeft size={18} />} {t('caseStudy.return')}
-        </Button>
+      <div className="min-h-[70vh] flex flex-col items-center justify-center px-6 text-center">
+        <h2 className="text-2xl font-normal text-white mb-6">{t('caseStudy.notFound')}</h2>
+        <Link to="/#projects" className="text-lg font-normal text-white link-underline pb-0.5">
+          {isRtl ? '↖' : '↗'} {t('caseStudy.return')}
+        </Link>
       </div>
     );
   }
 
   const image = study.image || `/jouda-food.jpg`;
-  const config = projectConfig[id || ''] || { mockup: 'browser' };
 
   return (
-    <article className="pt-24 pb-20">
+    <article className="pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="mb-8 sm:mb-12">
-          <Link to="/#projects" className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors mb-8">
-            {isRtl ? <ArrowRight size={18} /> : <ArrowLeft size={18} />} {t('caseStudy.back')}
+        <div className="mb-16">
+          <Link to="/#projects" className="inline-block py-3 px-1 -mx-1 text-sm font-normal text-muted hover:text-white transition-colors mb-12 active:scale-95">
+            {isRtl ? '→' : '←'} {t('caseStudy.back')}
           </Link>
-          <div className="mb-6">
-            <Badge variant="accent">{study.category}</Badge>
+          
+          <div className="mb-4">
+            <span className="text-sm font-normal text-muted">{study.category}</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-normal text-white mb-8 leading-tight tracking-tight"
+          >
             {study.title}
-          </h1>
-          <div className="flex flex-wrap gap-4">
-            <Button variant="primary">
-              <ExternalLink size={18} /> {t('caseStudy.visit')}
-            </Button>
-            <Button variant="outline">
-              <Code2 size={18} /> Source Code
-            </Button>
-          </div>
+          </motion.h1>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="flex flex-wrap gap-6"
+          >
+            {study.url && (
+              <a href={study.url} target="_blank" rel="noopener noreferrer" className="inline-block py-3 px-1 -mx-1 text-base font-normal text-white link-underline pb-0.5 active:scale-95">
+                {t('caseStudy.visit')}
+              </a>
+            )}
+
+          </motion.div>
         </div>
 
-        {/* Hero Image with Device Mockup */}
-        <div className={`w-full rounded-2xl sm:rounded-3xl overflow-hidden mb-8 sm:mb-12 md:mb-16 border border-white/10 relative ${
-          config.mockup === 'phone'
-            ? 'bg-gradient-to-br from-dark-700/50 to-dark-800/80 p-6 sm:p-8 md:p-12 flex justify-center items-center'
-            : 'bg-dark-800/50'
-        }`}>
-          <DeviceMockup
-            src={image}
+        {/* Hero Image (Grayscale filter to match Hyper-Minimalist aesthetic) */}
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="w-full mb-16 sm:mb-24"
+        >
+          <img 
+            src={image} 
             alt={study.title}
-            variant={config.mockup}
-            size="lg"
+            className="w-full h-auto grayscale contrast-125 touch-colorful hover:grayscale-0 hover:contrast-100 transition-all duration-700 ease-in-out border border-subtle"
+            onError={(e) => {
+              (e.target as HTMLElement).style.display = 'none';
+            }}
           />
-        </div>
+        </motion.div>
 
-        {/* Content */}
-        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
-          {/* Main Content */}
-          <div className="md:col-span-2 space-y-8 sm:space-y-12">
-            <section>
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.problem')}</h2>
-              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
+        {/* Content (Single Column, Typography Driven) */}
+        <div className="flex flex-col gap-16 sm:gap-24">
+          <section className="flex flex-col md:flex-row gap-4 md:gap-12">
+            <h2 className="text-xl font-normal text-white md:w-1/3 shrink-0">{t('caseStudy.problem')}</h2>
+            <div className="md:w-2/3">
+              <p className="text-base sm:text-lg text-muted leading-relaxed">
                 {study.problem}
               </p>
-            </section>
+            </div>
+          </section>
 
-            <section>
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.goal')}</h2>
-              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
-                {study.goal}
+          <section className="flex flex-col md:flex-row gap-4 md:gap-12">
+            <h2 className="text-xl font-normal text-white md:w-1/3 shrink-0">{t('caseStudy.role')}</h2>
+            <div className="md:w-2/3">
+              <p className="text-base sm:text-lg text-muted leading-relaxed">
+                {study.role}
               </p>
-            </section>
+            </div>
+          </section>
 
-            <section>
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.solution')}</h2>
-              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
+          <section className="flex flex-col md:flex-row gap-4 md:gap-12">
+            <h2 className="text-xl font-normal text-white md:w-1/3 shrink-0">{t('caseStudy.solution')}</h2>
+            <div className="md:w-2/3 flex flex-col gap-6">
+              <p className="text-base sm:text-lg text-muted leading-relaxed">
                 {study.solution}
               </p>
-            </section>
+              
+              <div>
+                <h3 className="text-sm font-normal text-white mb-3 uppercase tracking-wider">{t('caseStudy.features')}</h3>
+                <ul className="flex flex-col gap-2">
+                  {(study.features || []).map((feature: string, index: number) => (
+                    <li key={index} className="text-base text-muted">
+                      — {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
 
-            <section>
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.challenges')}</h2>
-              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
+          <section className="flex flex-col md:flex-row gap-4 md:gap-12">
+            <h2 className="text-xl font-normal text-white md:w-1/3 shrink-0">{t('caseStudy.challenges')}</h2>
+            <div className="md:w-2/3">
+              <p className="text-base sm:text-lg text-muted leading-relaxed">
                 {study.challenges}
               </p>
-            </section>
+            </div>
+          </section>
 
-            <section>
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{t('caseStudy.outcome')}</h2>
-              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
+          <section className="flex flex-col md:flex-row gap-4 md:gap-12">
+            <h2 className="text-xl font-normal text-white md:w-1/3 shrink-0">{t('caseStudy.outcome')}</h2>
+            <div className="md:w-2/3 flex flex-col gap-6">
+              <p className="text-base sm:text-lg text-white leading-relaxed">
                 {study.outcome}
               </p>
-            </section>
-
-            <section>
-              <h2 className="text-xl sm:text-2xl font-bold text-accent-green mb-3 sm:mb-4">{t('caseStudy.lessons')}</h2>
-              <div className="glass-card p-4 sm:p-6 border-accent-green/20">
-                <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
-                  {study.lessons}
+              
+              <div>
+                <h3 className="text-sm font-normal text-white mb-3 uppercase tracking-wider">{t('caseStudy.tech')}</h3>
+                <p className="text-base text-muted leading-relaxed">
+                  {(study.tech || []).join(', ')}
                 </p>
               </div>
-            </section>
-          </div>
-
-          {/* Sidebar */}
-          <div className="space-y-6 sm:space-y-8">
-            <div className="glass-card p-4 sm:p-6">
-              <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">{t('caseStudy.role')}</h3>
-              <p className="text-slate-200">{study.role}</p>
             </div>
+          </section>
 
-            <div className="glass-card p-4 sm:p-6">
-              <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">{t('caseStudy.features')}</h3>
-              <ul className="space-y-3">
-                {(study.features || []).map((feature: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2 text-slate-200">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-2 flex-shrink-0"></span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+          <section className="flex flex-col md:flex-row gap-4 md:gap-12 border-t border-subtle pt-16">
+            <h2 className="text-xl font-normal text-white md:w-1/3 shrink-0">{t('caseStudy.lessons')}</h2>
+            <div className="md:w-2/3">
+              <p className="text-base sm:text-lg text-muted leading-relaxed italic">
+                "{study.lessons}"
+              </p>
             </div>
-
-            <div className="glass-card p-4 sm:p-6">
-              <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">{t('caseStudy.tech')}</h3>
-              <div className="flex flex-wrap gap-2">
-                {(study.tech || []).map((tech: string, index: number) => (
-                  <Badge key={index} variant="outline">{tech}</Badge>
-                ))}
-              </div>
-            </div>
-          </div>
+          </section>
+        </div>
+        
+        {/* Footer Navigation */}
+        <div className="mt-24 pt-12 border-t border-subtle flex flex-wrap justify-between items-center gap-6">
+           <Link to="/#projects" className="inline-block py-3 px-1 -mx-1 text-base font-normal text-white link-underline pb-0.5 active:scale-95">
+             {isRtl ? '→' : '←'} {t('caseStudy.return')}
+           </Link>
+           <a 
+              href={`https://wa.me/967770859270?text=${encodeURIComponent(study.title)}`}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-base font-normal text-muted hover:text-white transition-colors"
+           >
+              ناقش مشروعاً مشابهاً
+           </a>
         </div>
       </div>
     </article>

@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+:root {
+  --app-bg: #161616;
+  --app-card: #1E1E1E;
+  --app-border: #2D2D2D;
+  --app-text: #EDEDED;
+  --app-muted: #888888;
+}
+
+@theme {
+  --color-app-bg: var(--app-bg);
+  --color-app-card: var(--app-card);
+  --color-app-border: var(--app-border);
+  --color-app-text: var(--app-text);
+  --color-app-muted: var(--app-muted);
+}
+
 @font-face {
   font-family: 'Rubik Arabic';
   src: url('/Rubik-VariableFont_wght.ttf') format('truetype');
@@ -10,46 +26,8 @@
 }
 
 @theme {
-  --color-dark-900: #050B14;
-  --color-dark-800: #0B1423;
-  --color-dark-700: #14233A;
-  --color-primary-500: #3B82F6;
-  --color-primary-400: #60A5FA;
-  --color-accent-purple: #8B5CF6;
-  --color-accent-green: #10B981;
   --font-sans: 'Inter', sans-serif;
   --font-rubik: 'Rubik Arabic', sans-serif;
-}
-
-@layer utilities {
-  .glass {
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .glass-card {
-    background-color: rgba(11, 20, 35, 0.8);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-  }
-
-  .glass-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
-  }
-
-  .text-gradient {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right, var(--color-primary-400), var(--color-accent-purple), var(--color-accent-green));
-  }
 }
 
 html {
@@ -57,7 +35,7 @@ html {
 }
 
 body {
-  @apply bg-dark-900 text-slate-300 font-sans antialiased selection:bg-primary-500/30 selection:text-white min-h-screen;
+  @apply bg-app-bg text-app-text font-sans antialiased selection:bg-[#38bdf8]/30 selection:text-app-text min-h-screen;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
@@ -67,17 +45,50 @@ body {
   min-width: 0;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Dark Mode Atmosphere */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #050B14;
+  background: #020617;
 }
 ::-webkit-scrollbar-thumb {
-  background: #14233A;
-  border-radius: 4px;
+  background: #1e293b;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3B82F6;
+  background: #38bdf8;
+}
+
+/* Minimalist Link Utilities with Electric Blue Accent */
+.link-underline {
+  @apply border-b border-transparent transition-colors duration-200 hover:border-app-text hover:text-app-text;
+}
+
+/* Typography & Borders */
+.border-subtle {
+  border-color: var(--app-border);
+}
+
+.text-muted {
+  color: var(--app-muted);
+  transition: color 200ms;
+}
+.text-muted:hover {
+  color: var(--app-text);
+}
+
+.text-muted-hover {
+  @apply text-[#94a3b8] transition-colors duration-200 hover:text-[#e2e8f0];
+}
+
+/* Force text-white to be text-app-text globally to avoid stark contrast */
+.text-white {
+  color: var(--app-text) !important;
+}
+
+/* Touch Device Adaptations */
+@media (hover: none) {
+  .touch-colorful {
+    filter: none !important;
+  }
 }

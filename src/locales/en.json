@@ -2,20 +2,21 @@
   "nav": {
     "about": "About",
     "projects": "Projects",
-    "services": "Services",
+    "services": "How I Help",
+    "howWeWork": "How We Work",
     "contact": "Contact",
     "lang": "العربية"
   },
   "hero": {
-    "name": "Mohamed Ahmed Mohamed Naji Muthana",
-    "title1": "Cybersecurity Graduate Building",
-    "title2": "Secure Digital Products",
-    "subtitle": "I build useful web products, e-commerce systems, and business tools with a security-aware mindset. Based in Sana'a, Yemen.",
-    "viewProjects": "View Projects",
-    "contactMe": "Contact Me",
-    "downloadCv": "Download CV",
-    "cvPath": "",
-    "cvComingSoon": "CV coming soon"
+    "name": "Mohamed Naji",
+    "status": "Available for Direct Projects & Remote Contracts",
+    "title1": "Secure Web Applications",
+    "title2": "Performance Meets Security",
+    "subtitle": "I design and build high-performance web applications and e-commerce platforms, combining modern user experience with robust cybersecurity.",
+    "discuss": "Discuss Your Project",
+    "viewProjects": "Explore Projects",
+    "whatsappText": "Hi Mohamed, I would like to discuss a new project",
+    "whatsappUrl": "https://wa.me/967770859270?text=Hi%20Mohamed,%20I%20would%20like%20to%20discuss%20a%20new%20project"
   },
   "about": {
     "title": "About Me",
@@ -62,16 +63,47 @@
     }
   },
   "services": {
-    "title": "Services",
-    "subtitle": "How I can help you build and secure your next project.",
-    "discuss": "Let's Discuss Your Project",
+    "title": "How I Can Help You",
+    "subtitle": "Comprehensive digital solutions combining modern development with robust security.",
     "items": [
-      { "title": "Website and Landing Page Design", "description": "Creating beautiful, high-converting interfaces tailored to your brand." },
-      { "title": "E-commerce Store Setup", "description": "Building robust online stores with secure checkout and inventory management." },
-      { "title": "Inventory and Business System Design", "description": "Streamlining operations with custom tools that connect across your business." },
-      { "title": "UI/UX Interface Design", "description": "Designing intuitive user experiences with modern aesthetics." },
-      { "title": "Website Deployment and Domain Setup", "description": "Handling the technical details to get your project live securely." },
-      { "title": "Basic Website Security Practices", "description": "Implementing foundational security measures to protect your digital assets." }
+      {
+        "title": "Web Application & Platform Development",
+        "description": "Building fast, scalable web apps and e-commerce stores designed for optimal conversion and user experience."
+      },
+      {
+        "title": "Backend Systems & Database Integration",
+        "description": "Centralizing multi-branch stock, APIs, and dashboards with real-time synchronization to prevent sales conflicts."
+      },
+      {
+        "title": "Security Assessment & Code Audits",
+        "description": "Identifying vulnerabilities, reviewing source code, and applying hardened protection to safeguard client data."
+      }
+    ]
+  },
+  "howWeWork": {
+    "title": "How We Work Together",
+    "subtitle": "A transparent 4-step process turning your ideas into reliable, secure digital products.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Understanding Requirements",
+        "description": "Discussing project details and business goals to recommend the ideal technical stack."
+      },
+      {
+        "num": "02",
+        "title": "Planning & UI/UX Design",
+        "description": "Mapping system architecture and intuitive user interfaces before writing a line of code."
+      },
+      {
+        "num": "03",
+        "title": "Development & Security Hardening",
+        "description": "Building with modern frameworks while performing security audits to prevent vulnerabilities."
+      },
+      {
+        "num": "04",
+        "title": "Deployment & Support",
+        "description": "Launching securely on cloud servers and providing ongoing technical support."
+      }
     ]
   },
   "skills": {
@@ -154,6 +186,7 @@
   "caseStudiesData": {
     "jouda-food": {
       "title": "Jouda Food",
+      "url": "https://www.joduafood.com",
       "image": "/jouda-food-en.jpg",
       "category": "E-commerce Platform",
       "problem": "Users needed a way to reliably identify gluten-free products and shop from a curated food store without confusion.",
@@ -168,6 +201,7 @@
     },
     "inventory-system": {
       "title": "Multi-Branch Inventory Management System",
+      "url": "https://stock.joudafood.com",
       "image": "/inventory-dashboard-en.jpg",
       "category": "Business System",
       "problem": "Managing inventory, products, and stock operations across multiple business branches was highly manual, leading to discrepancies between physical stock and the online store.",
