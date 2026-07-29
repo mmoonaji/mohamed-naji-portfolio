@@ -9,6 +9,7 @@
   },
   "hero": {
     "name": "Mohamed Naji",
+    "title": "Frontend Engineer | Secure Software Developer",
     "status": "Available for Direct Projects & Remote Contracts",
     "title1": "Secure Web Applications",
     "title2": "Performance Meets Security",
@@ -20,8 +21,10 @@
   },
   "about": {
     "title": "About Me",
-    "p1": "I hold a Bachelor's degree in Cybersecurity from Al-Rasheed Smart University. I have hands-on experience building and connecting digital platforms, including e-commerce and inventory systems.",
-    "p2": "My interests span UI/UX, frontend development, cybersecurity, and overarching digital systems. I am currently open to opportunities in Yemen or remote roles where I can combine my design sensibilities with robust, secure technical implementations.",
+    "p1": "I am a Frontend Engineer with a Bachelor's degree in Cybersecurity. I strive to build modern digital products that combine exceptional user experience with secure software development.",
+    "p2": "My career path merges software development with cybersecurity principles, enabling me to develop high-performance, user-friendly applications while integrating security aspects from the early stages of development.",
+    "p3": "I have hands-on experience developing e-commerce platforms, inventory management systems, and cybersecurity-related projects using the latest web technologies. I enjoy solving technical problems and transforming ideas into reliable, scalable digital products.",
+    "p4": "I am currently seeking opportunities in frontend development, secure software engineering, and application security, whether locally in Yemen or remotely.",
     "qualityNum": "Live E-commerce Project",
     "quality": "Jouda Food Platform",
     "secureTitle": "Connected Systems",
@@ -42,23 +45,26 @@
     "preview": "Project Preview",
     "readCaseStudy": "Read Case Study",
     "items": {
-      "jouda": {
-        "title": "Jouda Food",
-        "category": "E-commerce",
-        "description": "An e-commerce platform focused on helping users identify gluten-free products and shop from a curated food store.",
-        "image": "/jouda-food-en.jpg"
+      "jouda-food": {
+        "title": "JoudaFood",
+        "category": "E-commerce Platform",
+        "description": "Developing a modern e-commerce platform focused on high performance, ease of use, and enhancing the shopping experience.",
+        "image": "/jouda-food.jpg",
+        "layout": "mobile"
       },
-      "inventory": {
-        "title": "Multi-Branch Inventory",
-        "category": "Business System",
-        "description": "A system created to manage inventory, products, and stock operations across multiple branches and connect with the online store.",
-        "image": "/inventory-dashboard-en.jpg"
+      "inventory-system": {
+        "title": "JoudaStock",
+        "category": "Business Management Platform",
+        "description": "Developing a centralized inventory system with real-time synchronization across branches to ensure data accuracy and reduce stock conflicts.",
+        "image": "/inventory-dashboard.jpg",
+        "layout": "mobile"
       },
-      "malware": {
-        "title": "Windows Malware Analysis",
-        "category": "Cybersecurity",
-        "description": "A cybersecurity project that analyzes suspicious Windows files through static analysis, dynamic analysis, and machine learning.",
-        "image": "/malware-dashboard-en.jpg"
+      "malware-analysis": {
+        "title": "Securefusion",
+        "category": "Cybersecurity Project",
+        "description": "Developing a project to analyze malware and study its behavior using cybersecurity methodologies to help understand digital threats.",
+        "image": "/Exe_malware.png",
+        "layout": "desktop"
       }
     }
   },
@@ -67,16 +73,16 @@
     "subtitle": "Comprehensive digital solutions combining modern development with robust security.",
     "items": [
       {
-        "title": "Web Application & Platform Development",
-        "description": "Building fast, scalable web apps and e-commerce stores designed for optimal conversion and user experience."
+        "title": "Secure Web Application Development",
+        "description": "Building fast, modern, and scalable web applications while adhering to secure development best practices."
       },
       {
-        "title": "Backend Systems & Database Integration",
-        "description": "Centralizing multi-branch stock, APIs, and dashboards with real-time synchronization to prevent sales conflicts."
+        "title": "System Development & Service Integration",
+        "description": "Designing and developing dashboards, business management systems, and integrating databases and APIs to build comprehensive solutions that support business growth."
       },
       {
-        "title": "Security Assessment & Code Audits",
-        "description": "Identifying vulnerabilities, reviewing source code, and applying hardened protection to safeguard client data."
+        "title": "Application Security",
+        "description": "Analyzing applications, discovering security vulnerabilities, reviewing code quality, and contributing to building more secure and reliable software."
       }
     ]
   },
@@ -113,10 +119,39 @@
     "tools": "Development Tools",
     "design": "Design",
     "items": {
-      "frontend": ["React", "TypeScript", "Tailwind CSS", "HTML/CSS", "JavaScript", "UI Design Fundamentals", "Responsive Design"],
-      "cyber": ["Threat & Vulnerability Analysis", "Malware Analysis", "Static Analysis", "Dynamic Analysis", "Threat Intelligence", "Hack The Box", "TryHackMe"],
-      "tools": ["VS Code", "Cursor", "Git", "GitHub", "Vercel", "Namecheap", "AI Coding Tools"],
-      "design": ["Canva", "Photoshop Basics", "Logo Design Basics", "AI Design Tools"]
+      "frontend": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "HTML/CSS",
+        "JavaScript",
+        "UI Design Fundamentals",
+        "Responsive Design"
+      ],
+      "cyber": [
+        "Threat & Vulnerability Analysis",
+        "Malware Analysis",
+        "Static Analysis",
+        "Dynamic Analysis",
+        "Threat Intelligence",
+        "Hack The Box",
+        "TryHackMe"
+      ],
+      "tools": [
+        "VS Code",
+        "Cursor",
+        "Git",
+        "GitHub",
+        "Vercel",
+        "Namecheap",
+        "AI Coding Tools"
+      ],
+      "design": [
+        "Canva",
+        "Photoshop Basics",
+        "Logo Design Basics",
+        "AI Design Tools"
+      ]
     }
   },
   "experience": {
@@ -128,11 +163,26 @@
     "desc": "Completed practical cybersecurity training with exposure to security concepts, technical workflows, and real-world cybersecurity environments.",
     "educationTitle": "Education & Training",
     "items": [
-      { "title": "Bachelor's Degree in Cybersecurity", "institution": "Al-Rasheed Smart University" },
-      { "title": "Threats and Vulnerability Analysis", "institution": "SecureWay" },
-      { "title": "Computer Driving License", "institution": "General Telecommunications Institute" },
-      { "title": "Customer Service, Business Mgt, Office Mgt & Personal Marketing", "institution": "Al-Rasheed Languages and Skills Center" },
-      { "title": "English Language Studies (Pre-Intermediate)", "institution": "Excel Institute" }
+      {
+        "title": "Bachelor's Degree in Cybersecurity",
+        "institution": "Al-Rasheed Smart University"
+      },
+      {
+        "title": "Threats and Vulnerability Analysis",
+        "institution": "SecureWay"
+      },
+      {
+        "title": "Computer Driving License",
+        "institution": "General Telecommunications Institute"
+      },
+      {
+        "title": "Customer Service, Business Mgt, Office Mgt & Personal Marketing",
+        "institution": "Al-Rasheed Languages and Skills Center"
+      },
+      {
+        "title": "English Language Studies (Pre-Intermediate)",
+        "institution": "Excel Institute"
+      }
     ]
   },
   "contact": {
@@ -185,45 +235,79 @@
   },
   "caseStudiesData": {
     "jouda-food": {
-      "title": "Jouda Food",
+      "title": "JoudaFood",
       "url": "https://www.joduafood.com",
-      "image": "/jouda-food-en.jpg",
+      "image": "/jouda-food.jpg",
+      "layout": "mobile",
       "category": "E-commerce Platform",
-      "problem": "Users needed a way to reliably identify gluten-free products and shop from a curated food store without confusion.",
-      "goal": "Build an accessible, user-friendly e-commerce platform dedicated to gluten-free foods, ensuring clear product categorization and smooth checkout.",
-      "role": "Full-stack Developer & Platform Manager. I built and managed the platform, designed customer-facing interfaces, organized products and workflows, connected the store with an inventory management system, and helped deploy and maintain the platform.",
-      "solution": "Developed a modern storefront tailored for gluten-free product discovery. Integrated seamless navigation, robust search filtering, and clear product labeling.",
-      "features": ["Curated Gluten-Free Catalog", "Inventory System Integration", "Custom UI/UX Design", "Secure Checkout Workflow"],
-      "tech": ["React", "Tailwind CSS", "E-commerce APIs", "Inventory Backend"],
-      "challenges": "Synchronizing the online catalog with the physical inventory in real-time to avoid selling out-of-stock items, and designing a clear classification system for varying dietary restrictions.",
-      "outcome": "Successfully launched the platform, providing a reliable shopping hub for customers with specific dietary needs, supported by a stable and synchronized backend.",
-      "lessons": "Learned the importance of deep integration between e-commerce frontends and inventory backends, and how vital clear UI communication is for niche markets."
+      "problem": "Celiac patients in Yemen faced difficulties finding safe, gluten-free food products, experiencing isolation and anxiety over food contamination.",
+      "goal": "Build a safe digital companion (store and app) to help patients verify food safety and shop for trusted products easily.",
+      "role": "Frontend Engineer & UI/UX Designer. I designed and developed the storefront and shopping experience, focusing on usability and accessibility.",
+      "solution": "Designed a calm, user-friendly PWA with native Arabic support, providing AI ingredient scanning and safe product browsing without aggressive marketing.",
+      "features": [
+        "AI Ingredient Analysis",
+        "Gluten-Free Product Catalog",
+        "One-Handed Usage Design",
+        "Advanced Search Filtering"
+      ],
+      "tech": [
+        "React",
+        "Tailwind CSS",
+        "Capacitor",
+        "AI Integration"
+      ],
+      "challenges": "Balancing medical accuracy with a warm, comforting shopping experience that avoids feeling like a clinical app, while supporting various screen sizes.",
+      "outcome": "Launched a platform that provides trust and comfort to patients, making daily dietary decisions safe and reliable.",
+      "lessons": "Realized the importance of Empathy in Design; simplicity is the most crucial feature when the user is under stress or anxiety."
     },
     "inventory-system": {
-      "title": "Multi-Branch Inventory Management System",
+      "title": "JoudaStock",
       "url": "https://stock.joudafood.com",
-      "image": "/inventory-dashboard-en.jpg",
-      "category": "Business System",
-      "problem": "Managing inventory, products, and stock operations across multiple business branches was highly manual, leading to discrepancies between physical stock and the online store.",
-      "goal": "Design and implement a centralized inventory management system capable of supporting multiple branches and syncing seamlessly with an e-commerce platform.",
-      "role": "System Designer & Integrator. I designed inventory workflows, connected the system with the e-commerce platform, supported database integration, and organized stock and product management processes.",
-      "solution": "Created a centralized dashboard that tracks stock levels across all physical branches and automatically reflects these numbers on the online storefront.",
-      "features": ["Multi-Branch Tracking", "E-commerce Synchronization", "Real-time Stock Updates", "Database Integration"],
-      "tech": ["Database Management Systems", "API Integration", "Backend Logic Design"],
-      "challenges": "Handling race conditions during high-volume sales where both physical and online purchases occur simultaneously.",
-      "outcome": "Streamlined inventory workflows, significantly reducing out-of-stock errors and administrative overhead for branch managers.",
-      "lessons": "Gained practical experience in designing robust database schemas for complex business operations and handling cross-system synchronization."
+      "image": "/inventory-dashboard.jpg",
+      "layout": "mobile",
+      "category": "Business Management Platform",
+      "problem": "The need for a fast, localized inventory and POS system suited for the Yemeni environment, supporting frequent internet outages and multiple user roles.",
+      "goal": "Build an integrated centralized system serving storekeepers, managers, and drivers smoothly while ensuring accurate stock synchronization.",
+      "role": "System Engineer & Frontend Developer. I programmed role-based dashboards and built the offline-reading capabilities.",
+      "solution": "Developed a responsive dashboard relying on offline-first reading via localStorage, with secure data syncing to cloud databases, optimized for tablet screens.",
+      "features": [
+        "Offline Support (Reading)",
+        "Role-based Access",
+        "Tablet-Optimized Dashboards",
+        "Real-time Stock Syncing"
+      ],
+      "tech": [
+        "React",
+        "Tailwind CSS",
+        "Supabase",
+        "TypeScript",
+        "Vite"
+      ],
+      "challenges": "Managing system state during internet outages and clearly notifying users without disrupting warehouse workflows.",
+      "outcome": "Accelerated stock operations and reduced human errors, providing a comfortable interface for employees in varying lighting conditions.",
+      "lessons": "Deepened my knowledge in building Resilient Systems and understood how to design purely task-oriented interfaces without unnecessary embellishments."
     },
     "malware-analysis": {
-      "title": "Windows Malware Analysis System",
-      "image": "/malware-dashboard-en.jpg",
-      "category": "Cybersecurity",
+      "title": "Securefusion",
+      "image": "/Exe_malware.png",
+      "layout": "desktop",
+      "category": "Cybersecurity Project",
       "problem": "Relying on a single method of malware detection often leaves gaps, allowing sophisticated threats to bypass security measures.",
       "goal": "Develop an integrated cybersecurity project for analyzing suspicious Windows files through multiple detection methodologies.",
-      "role": "System Architect & Security Analyst. I designed the overall system workflow, integrated multiple analysis approaches, and worked on malware detection and threat assessment concepts.",
+      "role": "System Architect & Security Analyst. I designed the overall system workflow, integrated multiple analysis approaches, and worked on malware detection.",
       "solution": "Built a comprehensive analysis pipeline that subjects suspicious files to static, dynamic, and machine learning-based assessments, cross-referenced with threat intelligence feeds.",
-      "features": ["Static Analysis", "Dynamic Analysis", "Machine Learning Evaluation", "Threat Intelligence Integration"],
-      "tech": ["Python", "Virtual Environments", "ML Models", "Threat Feeds"],
+      "features": [
+        "Static Analysis",
+        "Dynamic Analysis",
+        "Machine Learning Evaluation",
+        "Threat Intelligence Integration"
+      ],
+      "tech": [
+        "Python",
+        "Virtual Environments",
+        "ML Models",
+        "Threat Feeds"
+      ],
       "challenges": "Safely executing and monitoring dynamic analysis without exposing the host system, and tuning the ML models to reduce false positives.",
       "outcome": "Created a robust, multi-layered detection system capable of identifying complex malware that would otherwise evade basic signature-based scanners.",
       "lessons": "Learned how different analysis techniques complement each other, and gained deep insights into Windows internals and malware evasion tactics."

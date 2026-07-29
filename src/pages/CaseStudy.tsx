@@ -65,21 +65,34 @@ export function CaseStudy() {
           </motion.div>
         </div>
 
-        {/* Hero Image (Grayscale filter to match Hyper-Minimalist aesthetic) */}
+        {/* Hero Image (Conditional Layout) */}
         <motion.div 
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
           className="w-full mb-16 sm:mb-24"
         >
-          <img 
-            src={image} 
-            alt={study.title}
-            className="w-full h-auto grayscale contrast-125 touch-colorful hover:grayscale-0 hover:contrast-100 transition-all duration-700 ease-in-out border border-subtle"
-            onError={(e) => {
-              (e.target as HTMLElement).style.display = 'none';
-            }}
-          />
+          {study.layout === 'desktop' ? (
+            <div className="relative w-full aspect-video sm:aspect-[21/9] overflow-hidden rounded-2xl border border-app-border">
+              <img 
+                src={image} 
+                alt={study.title}
+                fetchPriority="high"
+                className="w-full h-full object-cover touch-colorful hover:scale-[1.03] transition-transform duration-700 ease-out motion-reduce:transform-none"
+                onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+              />
+            </div>
+          ) : (
+            <div className="relative w-full aspect-[4/3] sm:aspect-[21/9] overflow-hidden rounded-2xl bg-slate-50 dark:bg-app-card border border-slate-200 dark:border-app-border flex items-start justify-center pt-10 sm:pt-16 transition-colors duration-300">
+              <img 
+                src={image} 
+                alt={study.title}
+                fetchPriority="high"
+                className="w-[50%] sm:w-[25%] h-auto object-cover rounded-t-[1.5rem] shadow-[0_-8px_30px_rgb(0,0,0,0.15)] dark:shadow-[0_-8px_30px_rgb(0,0,0,0.5)] ring-1 ring-black/5 dark:ring-white/10 touch-colorful hover:-translate-y-4 transition-all duration-700 ease-out motion-reduce:transform-none"
+                onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+              />
+            </div>
+          )}
         </motion.div>
 
         {/* Content (Single Column, Typography Driven) */}

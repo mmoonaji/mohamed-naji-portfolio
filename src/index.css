@@ -7,6 +7,20 @@
   --app-border: #2D2D2D;
   --app-text: #EDEDED;
   --app-muted: #888888;
+  --app-scroll-track: #020617;
+  --app-scroll-thumb: #1e293b;
+  --app-scroll-hover: #38bdf8;
+}
+
+:root.light {
+  --app-bg: #F9FAFB;
+  --app-card: #FFFFFF;
+  --app-border: #E2E8F0;
+  --app-text: #0F172A;
+  --app-muted: #475569;
+  --app-scroll-track: #f1f5f9;
+  --app-scroll-thumb: #cbd5e1;
+  --app-scroll-hover: #0284c7;
 }
 
 @theme {
@@ -18,8 +32,8 @@
 }
 
 @font-face {
-  font-family: 'Rubik Arabic';
-  src: url('/Rubik-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Beiruti';
+  src: url('/Beiruti-VariableFont_wght.ttf') format('truetype');
   font-weight: 300 900;
   font-style: normal;
   font-display: swap;
@@ -27,11 +41,16 @@
 
 @theme {
   --font-sans: 'Inter', sans-serif;
-  --font-rubik: 'Rubik Arabic', sans-serif;
+  --font-arabic: 'Beiruti', sans-serif;
 }
 
 html {
   overflow-x: hidden;
+}
+
+html[lang="ar"] {
+  /* Automatically scales all rem-based typography for Arabic */
+  font-size: 112.5%; 
 }
 
 body {
@@ -45,18 +64,18 @@ body {
   min-width: 0;
 }
 
-/* Custom Scrollbar - Dark Mode Atmosphere */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: var(--app-scroll-track);
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: var(--app-scroll-thumb);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #38bdf8;
+  background: var(--app-scroll-hover);
 }
 
 /* Minimalist Link Utilities with Electric Blue Accent */

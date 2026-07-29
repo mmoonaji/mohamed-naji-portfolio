@@ -6,8 +6,7 @@ import { Mail, ArrowUpRight } from 'lucide-react';
 
 export function Home() {
   const location = useLocation();
-  const { t, i18n } = useTranslation();
-  const isRtl = i18n.language === 'ar';
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (location.hash) {
@@ -76,7 +75,7 @@ export function Home() {
         </div>
         <hgroup className="min-w-0">
           <h1 className="text-lg font-medium text-app-text mb-0.5">{t('hero.name')}</h1>
-          <p className="text-sm font-normal text-app-muted">{isRtl ? 'مطور واجهات أمامية' : 'Frontend Developer'}</p>
+          <p className="text-sm font-normal text-app-muted">{t('hero.title')}</p>
         </hgroup>
       </motion.header>
 
@@ -89,12 +88,11 @@ export function Home() {
       >
         <h2 className="text-base font-semibold tracking-tight text-app-text">{t('about.title')}</h2>
         <div className="space-y-3">
-          <p className="text-base font-medium leading-7 text-app-muted text-pretty">
-            {t('about.p1')}
-          </p>
-          <p className="text-base font-medium leading-7 text-app-muted text-pretty">
-            {t('about.p2')}
-          </p>
+          {['p1', 'p2', 'p3', 'p4'].map(p => (
+            <p key={p} className="text-base font-medium leading-7 text-app-muted text-pretty">
+              {t(`about.${p}`)}
+            </p>
+          ))}
         </div>
         
         {/* Social Links Grid */}
@@ -132,26 +130,37 @@ export function Home() {
               to={`/case-study/${project.id}`}
               className="group block outline-none cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 rounded-lg"
             >
-              <div className="flex flex-col gap-3">
-                <div className="relative aspect-[3/2] overflow-hidden rounded-lg bg-app-card border border-app-border">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover grayscale contrast-125 touch-colorful group-hover:grayscale-0 group-hover:contrast-100 transition-all duration-500"
-                    onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
-                  />
-                </div>
-                <div className="flex min-w-0 items-center justify-between gap-3">
-                  <h3 className="text-base font-medium text-app-text group-hover:text-sky-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <div className="shrink-0 text-app-muted group-hover:text-sky-400 transition-colors">
-                    {isRtl ? <ArrowUpRight size={18} className="-scale-x-100" /> : <ArrowUpRight size={18} />}
+              <div className="flex flex-col gap-4">
+                {project.layout === 'desktop' ? (
+                  <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-app-border">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      loading="lazy"
+                      className="w-full h-full object-cover touch-colorful group-hover:scale-[1.03] transition-transform duration-700 ease-out motion-reduce:transform-none"
+                      onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                    />
                   </div>
+                ) : (
+                  <div className="relative aspect-[3/2] overflow-hidden rounded-2xl bg-slate-50 dark:bg-app-card border border-slate-200 dark:border-app-border flex items-start justify-center pt-8 sm:pt-10 transition-colors duration-300">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      loading="lazy"
+                      className="w-[60%] sm:w-[55%] h-auto object-cover rounded-t-[1.5rem] shadow-[0_-8px_30px_rgb(0,0,0,0.15)] dark:shadow-[0_-8px_30px_rgb(0,0,0,0.4)] ring-1 ring-black/5 dark:ring-white/10 touch-colorful group-hover:-translate-y-3 transition-all duration-700 ease-out motion-reduce:transform-none"
+                      onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                    />
+                  </div>
+                )}
+                <div className="flex flex-col gap-1 px-1">
+                  <div className="flex min-w-0 items-center justify-between gap-3">
+                    <h3 className="text-lg font-medium text-app-text group-hover:text-sky-500 transition-colors">
+                      {project.title}
+                    </h3>
+                    <ArrowUpRight className="size-5 shrink-0 text-app-muted group-hover:text-sky-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all motion-reduce:transform-none" />
+                  </div>
+                  <p className="text-sm font-normal text-app-muted">{project.category}</p>
                 </div>
-                <p className="text-sm font-medium leading-relaxed text-app-muted line-clamp-2">
-                  {project.category}
-                </p>
               </div>
             </Link>
           ))}
