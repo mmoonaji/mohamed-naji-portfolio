@@ -7,34 +7,51 @@
 web
 
 ## Users
-Hiring managers, technical recruiters, founders, small business owners, and collaborators who need to quickly understand Mohamed Naji's credibility, practical project experience, and fit for jobs, remote roles, or freelance work. Visitors may arrive in English or Arabic and are likely scanning for proof: real projects, security awareness, web/e-commerce capability, and a clear way to make contact.
+
+Hiring managers, technical recruiters, engineering leads, founders, and business owners seeking to evaluate Mohamed Naji's credibility, engineering craft, and fit for frontend, fullstack, or secure product development roles (remote, local, or high-trust freelance contracts). Visitors arrive in Arabic or English via direct CV links, GitHub, Twitter (X), and WhatsApp, scanning for concrete proof: real-world production systems, security awareness, AI-assisted engineering velocity, and direct contact channels.
 
 ## Product Purpose
-This portfolio presents Mohamed Naji as a cybersecurity graduate who builds useful, secure digital products: web interfaces, e-commerce platforms, inventory/business tools, and cybersecurity analysis projects. Success means a visitor can quickly understand what Mohamed does, trust the quality of the work, explore concrete project evidence, and start a hiring or project conversation.
+
+This portfolio presents Mohamed Naji as a cybersecurity graduate and pragmatic product engineer who designs, builds, and maintains resilient digital products: high-performance web applications, complex multi-warehouse fulfillment engines, e-commerce platforms, and security analysis tools. Success is achieved when a visitor quickly understands Mohamed's capabilities, trusts his engineering rigor, explores deep-dive case studies, and initiates a hiring or project conversation.
 
 ## Positioning
-A builder who bridges the gap between secure systems engineering and functional product development, combining cybersecurity rigor with practical frontend execution.
+
+A pragmatic product engineer bridging cybersecurity rigor, frontend craft, and disciplined AI-assisted development workflows. Uniquely differentiated by proven 1-year production ownership of end-to-end digital ecosystems (Joudah & JoudaStock) rather than generic portfolio mockups.
 
 ## Operating Context
-Visitors primarily access this via direct links from CVs, Twitter (X) profiles, and WhatsApp referrals. It operates as a high-trust digital business card and case study repository.
+
+Visitors access the portfolio primarily from mobile and desktop links in CVs, Twitter (X) profiles, WhatsApp business threads, and GitHub repositories. It serves as an authoritative digital credential, interactive resume, and engineering case study repository.
 
 ## Capabilities and Constraints
-The product is a static, bilingual (English/Arabic RTL) web application built with React/Vite. The core interaction is reading case studies and navigating to a WhatsApp direct contact flow.
+
+- High-performance, bilingual (Arabic RTL and English LTR) single-page application built with React 19, Vite, Tailwind CSS, and Framer Motion.
+- Deep-dive narrative case studies with real impact metrics, architecture breakdowns, AI-assisted workflow steppers, and interactive live links.
+- Zero-friction contact mechanisms routing to direct WhatsApp chats and pre-filled email inquiries.
+- Pure dark and light mode support with fluid typography and WCAG AA contrast compliance.
 
 ## Brand Commitments
-Trustworthy, practical, security-minded. The voice should feel capable and grounded rather than inflated: clear about strengths, honest about experience, and focused on useful outcomes.
+
+- **Trustworthy & Grounded:** Authentic voice that presents real challenges, debugging triumphs, and production metrics rather than exaggerated claims.
+- **Craft & Accessibility:** Equal typographic dignity for Arabic (Beiruti / Rubik) and English (Inter), ensuring seamless RTL/LTR reading under any device form factor.
+- **Pragmatic Security:** Communicating cybersecurity rigor as a foundational engineering practice (idempotent transactions, RLS, input validation, threat modeling).
 
 ## Evidence on Hand
-- "Jouda Food" e-commerce/delivery app.
-- Inventory Management system dashboard.
-- Malware Analysis and Classification models.
-- Direct links to GitHub and WhatsApp.
+
+- **Joudah — AI-Assisted Digital Product Ecosystem:** Integrated storefront PWA, POS terminal, and AI ingredient scanner for celiac patients (+800 real visitors, +4,000 page views).
+- **JoudaStock — Multi-Warehouse & Fulfillment Engine:** Centralized operations OS for 3 warehouses, order fulfillment, and daily driver cash settlements (Idempotent transactions, offline-first reading).
+- **Securefusion:** Multi-method malware analysis pipeline (static, dynamic, ML detection).
+- **MasarCode:** Interactive developer roadmap and educational MDX book with smart reader controls.
+- **Asir Store:** Editorial-style e-commerce PWA with native-like performance.
+- Direct links to live deployments, GitHub repositories, and WhatsApp direct contact.
 
 ## Product Principles
-1. Lead with credible proof: project previews, case studies, and outcomes carry more weight than claims.
-2. Make security feel practical: communicate security awareness as a disciplined way of building, not as theatrical imagery.
-3. Serve both audiences: balance employability signals with freelance service clarity so jobs and client work both feel intentional.
-4. Respect bilingual context: Arabic and English experiences must feel equally cared for, readable, and natural.
+
+1. **Lead with Credible Proof:** Project case studies, architectural decisions, and real-world metrics carry far more weight than abstract skill lists.
+2. **Make Security and Architecture Practical:** Frame cybersecurity and state management as disciplined engineering decisions that protect real users and business finances.
+3. **Show AI Leadership:** Demonstrate mastery over AI-assisted engineering workflows (Specs ➔ Subagents ➔ Automated Tests ➔ DevTools Profiling ➔ Deployment).
+4. **Bilingual Excellence:** Arabic and English experiences are first-class citizens, sharing the same typographic authority and layout precision.
 
 ## Accessibility & Inclusion
-Target WCAG AA basics: readable contrast, keyboard-accessible navigation and controls, clear focus states, responsive layouts, reduced-motion support, and robust Arabic RTL layout support.
+
+Target WCAG AA standard: high-contrast typography, clear keyboard navigation with visible focus rings, reduced-motion preferences support (`prefers-reduced-motion`), and robust Arabic RTL layout alignment.
+
