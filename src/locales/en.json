@@ -46,9 +46,9 @@
     "readCaseStudy": "Read Case Study",
     "items": {
       "jouda-food": {
-        "title": "JoudaFood",
-        "category": "E-commerce Platform",
-        "description": "Developing a modern e-commerce platform focused on high performance, ease of use, and enhancing the shopping experience.",
+        "title": "Joudah",
+        "category": "Digital Product Ecosystem (E-Commerce & ERP)",
+        "description": "An integrated digital ecosystem for celiac disease patients combining a storefront, inventory management, and POS.",
         "image": "/jouda-food.jpg",
         "layout": "mobile"
       },
@@ -232,46 +232,88 @@
   },
   "caseStudy": {
     "back": "Back to Home",
-    "visit": "Visit Project",
+    "visit": "Visit Store",
     "placeholder": "Project Visual Placeholder",
     "notFound": "Case Study Not Found",
     "return": "Return to Projects",
-    "problem": "The Problem",
+    "summary": "Executive Summary",
+    "theEcosystem": "The Digital Ecosystem",
+    "problem": "The Problem & Business Need",
     "goal": "The Goal",
-    "role": "My Role",
-    "solution": "The Solution",
-    "features": "Main Features",
+    "role": "My Role & Leadership",
+    "howIBuiltIt": "How I Built It (AI-Assisted Workflow)",
+    "solution": "The Technical Solution",
+    "features": "Key Capabilities",
     "tech": "Tools & Technologies",
-    "challenges": "Challenges",
-    "outcome": "Outcome & Impact",
-    "lessons": "What I Learned"
+    "designDecisions": "Design Decisions & UX Strategy",
+    "challenges": "Engineering Challenges & Debugging",
+    "outcome": "Impact & Results",
+    "metrics": "Impact & Performance Metrics",
+    "lessons": "What I Actually Learned",
+    "discussSimilar": "Discuss a Similar Project"
   },
   "caseStudiesData": {
     "jouda-food": {
-      "title": "JoudaFood",
+      "title": "Joudah — AI-Assisted Digital Product Ecosystem",
+      "tagline": "An integrated digital ecosystem for celiac products, inventory & POS — built and continuously improved using AI-assisted engineering workflows.",
       "url": "https://www.joduafood.com",
       "image": "/jouda-food.jpg",
       "layout": "mobile",
-      "category": "E-commerce Platform",
-      "problem": "Celiac patients in Yemen faced difficulties finding safe, gluten-free food products, experiencing isolation and anxiety over food contamination.",
-      "goal": "Build a safe digital companion (store and app) to help patients verify food safety and shop for trusted products easily.",
-      "role": "Frontend Engineer & UI/UX Designer. I designed and developed the storefront and shopping experience, focusing on usability and accessibility.",
-      "solution": "Designed a calm, user-friendly PWA with native Arabic support, providing AI ingredient scanning and safe product browsing without aggressive marketing.",
+      "category": "Digital Product Ecosystem (E-Commerce & ERP)",
+      "period": "2025 – 2026",
+      "liveLinks": [
+        { "label": "Customer Storefront (JoudaFood)", "url": "https://www.joduafood.com" },
+        { "label": "Warehouse & POS System (JoudaStock)", "url": "https://stock.joudafood.com" }
+      ],
+      "summary": "Joudah is a comprehensive digital ecosystem built for a local business serving people with celiac disease and dietary restrictions. I took full ownership of designing, building, and continuously maintaining all its digital systems for nearly a year using disciplined, AI-assisted development workflows.",
+      "metrics": [
+        { "value": "+800", "label": "Real Visitors", "sub": "August 2026" },
+        { "value": "+4,000", "label": "Page Views", "sub": "Continuous Engagement" },
+        { "value": "100%", "label": "Realtime Sync", "sub": "Storefront, Inventory & POS" },
+        { "value": "1 Year", "label": "In Production", "sub": "Continuous iteration & ops" }
+      ],
+      "problem": "The business faced a critical operational gap: scattered product management across disconnected spreadsheets, inventory discrepancies against floor sales, and the lack of a dependable digital hub for celiac patients who need strict, verified ingredient transparency in an environment with frequent internet instability.",
+      "goal": "Engineer a unified digital ecosystem that provides a safe, calming shopping experience for patients, while equipping warehouse and retail staff with real-time inventory, order fulfillment, and offline-capable POS tools.",
+      "role": "I acted as the sole product engineer and technical product lead: translating business challenges into strict specifications, authoring architecture & context documents, orchestrating autonomous AI coding agents, designing UI/UX layouts, conducting end-to-end testing, resolving complex bugs, and managing production releases.",
+      "ecosystem": [
+        { "title": "Customer Storefront (PWA)", "desc": "High-performance Progressive Web App enabling instant ordering, ingredient verification, and fluid single-handed navigation." },
+        { "title": "Operations & Inventory (JoudaStock)", "desc": "Centralized backoffice dashboard managing catalog items, stock thresholds, supplier data, and offline-first reading." },
+        { "title": "Cloud POS Terminal", "desc": "Rapid point-of-sale checkout interface for store clerks with instant syncing upon reconnection." },
+        { "title": "AI Product Checker", "desc": "Intelligent analyzer assessing package ingredient labels to assist patients in confirming dietary safety." }
+      ],
+      "solution": "Architected an end-to-end digital infrastructure connecting a user-friendly patient storefront with resilient back-office warehouse operations, ensuring zero data loss and instantaneous sync across all touchpoints.",
+      "workflow": [
+        { "step": "01", "title": "Requirements & Context Docs", "desc": "Deconstructing business friction into formal PRDs, domain models, and strict context files to ground AI agent reasoning." },
+        { "step": "02", "title": "AI Implementation via Agents", "desc": "Directing AI subagents (Claude Code / Agents) across isolated, well-scoped tickets adhering to strict coding standards." },
+        { "step": "03", "title": "Automated & E2E Verification", "desc": "Enforcing TypeScript strictness, linting suites, and E2E test suites on critical paths like checkout and inventory mutations." },
+        { "step": "04", "title": "Manual Profiling & DevTools", "desc": "Deep inspection of network payloads, memory footprints, layout shifts, and real-device touch responsiveness." },
+        { "step": "05", "title": "Deployment & Production Telemetry", "desc": "Continuous delivery via Vercel & Supabase, monitoring live error boundaries and database connection health." }
+      ],
       "features": [
-        "AI Ingredient Analysis",
-        "Gluten-Free Product Catalog",
-        "One-Handed Usage Design",
-        "Advanced Search Filtering"
+        "Ultra-fast mobile-first PWA storefront with single-hand usability",
+        "Centralized inventory dashboard with automated low-stock triggers",
+        "Live POS terminal with offline-first reading and background sync",
+        "AI-powered ingredient scanner tailored for celiac safety",
+        "Granular role-based access control (RBAC) for floor and admin staff"
       ],
       "tech": [
-        "React",
+        "React 19",
+        "TypeScript",
         "Tailwind CSS",
-        "Capacitor",
-        "AI Integration"
+        "Supabase (PostgreSQL & Auth)",
+        "AI-Assisted Workflows (Claude Code / Agents)",
+        "Vite",
+        "Vercel",
+        "Git / GitHub"
       ],
-      "challenges": "Balancing medical accuracy with a warm, comforting shopping experience that avoids feeling like a clinical app, while supporting various screen sizes.",
-      "outcome": "Launched a platform that provides trust and comfort to patients, making daily dietary decisions safe and reliable.",
-      "lessons": "Realized the importance of Empathy in Design; simplicity is the most crucial feature when the user is under stress or anxiety."
+      "designDecisions": "Designed with a strict Mobile-First philosophy, reflecting the 85%+ mobile usage across both shoppers and floor clerks. Established a calm, high-legibility visual hierarchy that surfaces dietary allergen alerts clearly without triggering anxiety, paired with an understated palette that reduces cognitive fatigue during lengthy stock audits.",
+      "challenges": "A major challenge emerged in complex invoice tax and multi-tier discount calculations within the POS: AI models repeatedly asserted the edge-case math was resolved while discrepancies persisted in production scenarios. I shifted the workflow entirely: halted speculative generation, wrote an exhaustive unit-test suite with concrete edge cases, and decoupled calculation logic into pure deterministic functions until achieving 100% verification.",
+      "outcome": "Transformed Joudah from fragile manual records to an always-on digital operation, serving 800+ real visitors and 4,000+ page views in August 2026 alone with zero inventory sync conflicts.",
+      "lessons": [
+        "AI is an extraordinary multiplier for velocity, but requires an engineer who commands the architecture and enforces rigorous unit tests.",
+        "Precision in specs and context documentation is the sole barrier between modular architecture and context chaos when orchestrating AI agents.",
+        "Product engineering demands genuine empathy: digital tools serving vulnerable users must prioritize reliability and clarity above all else."
+      ]
     },
     "inventory-system": {
       "title": "JoudaStock",
