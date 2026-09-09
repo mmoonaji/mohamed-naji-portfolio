@@ -51,7 +51,7 @@ export function CaseStudy() {
         <header className="mb-12 sm:mb-16">
           <Link 
             to="/#projects" 
-            className="inline-flex items-center gap-1.5 py-2 px-1 -mx-1 text-sm font-normal text-app-muted hover:text-app-text transition-colors mb-8 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 rounded"
+            className="inline-flex items-center gap-1.5 min-h-[44px] py-2.5 px-2 -mx-2 text-sm font-normal text-app-muted hover:text-app-text transition-colors mb-8 active:scale-95 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
           >
             <span>{isRtl ? '→' : '←'}</span>
             <span>{t('caseStudy.back')}</span>
@@ -102,7 +102,7 @@ export function CaseStudy() {
                   href={link.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-app-text bg-app-card hover:bg-app-border/40 border border-app-border rounded-xl transition-all active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-app-text bg-app-card hover:bg-app-border/40 border border-app-border rounded-xl transition-all active:scale-95 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
                 >
                   <span>{link.label}</span>
                   <ArrowUpRight className="size-4 text-app-muted" />
@@ -237,7 +237,7 @@ export function CaseStudy() {
           {ecosystem && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12">
               <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
-                <Layers className="size-5 text-sky-500" />
+                <Layers className="size-5 text-app-muted" />
                 <span>{t('caseStudy.theEcosystem')}</span>
               </h2>
               <div className="md:w-2/3 grid sm:grid-cols-2 gap-4">
@@ -259,13 +259,13 @@ export function CaseStudy() {
           {workflow && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12">
               <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
-                <Cpu className="size-5 text-sky-500" />
+                <Cpu className="size-5 text-app-muted" />
                 <span>{t('caseStudy.howIBuiltIt')}</span>
               </h2>
               <div className="md:w-2/3 flex flex-col gap-4">
                 {workflow.map((step: { step: string; title: string; desc: string }, idx: number) => (
                   <div key={idx} className="p-4 rounded-xl bg-app-card border border-app-border flex gap-4 items-start">
-                    <span className="font-mono text-xs font-bold text-sky-500 bg-sky-500/10 px-2 py-1 rounded-md shrink-0">
+                    <span className="font-mono text-xs font-bold text-app-text bg-app-border/40 px-2 py-1 rounded-md shrink-0">
                       {step.step}
                     </span>
                     <div className="flex flex-col gap-1 min-w-0">
@@ -378,13 +378,13 @@ export function CaseStudy() {
           {lessons.length > 0 && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12 border-t border-app-border pt-12">
               <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
-                <Lightbulb className="size-5 text-sky-500" />
+                <Lightbulb className="size-5 text-app-muted" />
                 <span>{t('caseStudy.lessons')}</span>
               </h2>
               <div className="md:w-2/3 flex flex-col gap-4">
                 {lessons.map((lesson: string, idx: number) => (
                   <div key={idx} className="flex gap-3 items-start">
-                    <CheckCircle2 className="size-5 text-sky-500 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="size-5 text-app-muted shrink-0 mt-0.5" />
                     <p className="text-base sm:text-lg text-app-muted leading-relaxed">
                       {lesson}
                     </p>
@@ -400,7 +400,7 @@ export function CaseStudy() {
         <footer className="mt-20 pt-10 border-t border-app-border flex flex-wrap justify-between items-center gap-6">
           <Link 
             to="/#projects" 
-            className="inline-flex items-center gap-2 py-2 px-1 -mx-1 text-base font-normal text-app-text link-underline active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 rounded"
+            className="inline-flex items-center gap-2 min-h-[44px] py-2 px-2 -mx-2 text-base font-normal text-app-text link-underline active:scale-95 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
           >
             <span>{isRtl ? '→' : '←'}</span>
             <span>{t('caseStudy.return')}</span>
@@ -409,7 +409,7 @@ export function CaseStudy() {
             href={`https://wa.me/967770859270?text=${encodeURIComponent(isRtl ? `أهلاً محمد، اطلعت على دراسة حالة ${study.title} وأود مناقشة مشروع مشابه` : `Hi Mohamed, I read your case study for ${study.title} and would love to discuss a similar project`)}`}
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-app-card hover:bg-app-border/50 border border-app-border text-sm font-medium text-app-text transition-all active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50 shadow-sm"
+            className="inline-flex items-center gap-2 min-h-[44px] px-5 py-2.5 rounded-xl bg-app-card hover:bg-app-border/50 border border-app-border text-sm font-medium text-app-text transition-all active:scale-95 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50 shadow-sm"
           >
             <span>{t('caseStudy.discussSimilar') || (isRtl ? 'ناقش مشروعاً مشابهاً' : 'Discuss a Similar Project')}</span>
             <ArrowUpRight className="size-4 text-app-muted" />

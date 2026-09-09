@@ -47,7 +47,7 @@ function App() {
 
   return (
     <Router>
-      <div className={`min-h-screen bg-app-bg text-app-text selection:bg-sky-500/30 selection:text-app-text ${i18n.language === 'ar' ? 'font-arabic' : 'font-sans'}`} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
+      <div className={`min-h-screen bg-app-bg text-app-text selection:bg-white/20 selection:text-white ${i18n.language === 'ar' ? 'font-arabic' : 'font-sans'}`} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
         <div className="flex-grow">
           <MotionConfig reducedMotion="user">
             <Routes>

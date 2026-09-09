@@ -82,15 +82,15 @@ export function Home() {
           ))}
         </div>
         
-        {/* Social Links Row: Clean Monochromatic Text Links */}
-        <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-2 text-sm text-app-muted" aria-label="Social and direct links">
+        {/* Social Links Row: Clean Monochromatic Text Links with ≥ 44px Touch Targets */}
+        <nav className="flex flex-wrap items-center gap-x-6 gap-y-1 pt-1 text-sm text-app-muted" aria-label="Social and direct links">
           {socialLinks.map((link, idx) => (
             <a 
               key={idx}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 hover:text-app-text transition-colors border-b border-transparent hover:border-app-text pb-0.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
+              className="inline-flex items-center gap-1.5 min-h-[44px] py-2 hover:text-app-text transition-colors border-b border-transparent hover:border-app-text focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
             >
               <span>{link.label}</span>
               <ArrowUpRight className="size-3.5 opacity-60" aria-hidden="true" />
@@ -181,19 +181,19 @@ export function Home() {
           </p>
         </div>
         
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-1">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1">
           <a
             href={t('hero.whatsappUrl')}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-normal text-app-text border-b border-app-text/70 pb-0.5 hover:border-app-text hover:text-white transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
+            className="inline-flex items-center gap-1.5 min-h-[44px] py-2 text-sm font-normal text-app-text border-b border-app-text/70 hover:border-app-text hover:text-white transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
           >
             <span>{t('contact.whatsappCta')}</span>
             <ArrowUpRight className="size-3.5" aria-hidden="true" />
           </a>
           <a
             href="mailto:mohammednaji.dev@gmail.com"
-            className="inline-flex items-center gap-1.5 text-sm text-app-muted hover:text-app-text transition-colors border-b border-transparent hover:border-app-text pb-0.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
+            className="inline-flex items-center gap-1.5 min-h-[44px] py-2 text-sm text-app-muted hover:text-app-text transition-colors border-b border-transparent hover:border-app-text focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
           >
             <span>{t('contact.emailCta')}</span>
             <ArrowUpRight className="size-3.5" aria-hidden="true" />
