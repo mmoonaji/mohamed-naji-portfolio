@@ -21,10 +21,10 @@
   },
   "about": {
     "title": "About Me",
-    "p1": "I am a Frontend Engineer with a Bachelor's degree in Cybersecurity. I strive to build modern digital products that combine exceptional user experience with secure software development.",
-    "p2": "My career path merges software development with cybersecurity principles, enabling me to develop high-performance, user-friendly applications while integrating security aspects from the early stages of development.",
-    "p3": "I have hands-on experience developing e-commerce platforms, inventory management systems, and cybersecurity-related projects using the latest web technologies. I enjoy solving technical problems and transforming ideas into reliable, scalable digital products.",
-    "p4": "I am currently seeking opportunities in frontend development, secure software engineering, and application security, whether locally in Yemen or remotely.",
+    "p1": "Software and systems engineer with a background in cybersecurity. I specialize in designing and delivering production systems that balance high-throughput frontend performance with rigorous security architecture.",
+    "p2": "Over the past year, I held end-to-end production ownership of a live commercial ecosystem (Joudah & JoudaStock)—architecting a 3-warehouse inventory engine, offline-first POS workflows, and idempotent financial settlements serving +800 active celiac patients.",
+    "p3": "My technical practice fuses defensive software engineering, threat modeling, and modern AI-assisted workflows to ship resilient, scalable software with zero tolerance for fragility.",
+    "p4": "Available for high-impact frontend engineering contracts, business system architectures, and remote full-time opportunities worldwide.",
     "qualityNum": "Live E-commerce Project",
     "quality": "Jouda Food Platform",
     "secureTitle": "Connected Systems",
@@ -42,40 +42,41 @@
   },
   "projects": {
     "title": "Featured Projects",
+    "count": "5 Selected Systems",
     "preview": "Project Preview",
     "readCaseStudy": "Read Case Study",
     "items": {
       "jouda-food": {
         "title": "Joudah",
         "category": "Digital Product Ecosystem (E-Commerce & ERP)",
-        "description": "An integrated digital ecosystem for celiac disease patients combining a storefront, inventory management, and POS.",
+        "description": "Integrated digital ecosystem for celiac disease patients. 1-year production ownership spanning high-conversion storefront, offline-first PWA, and automated ingredient safety verification.",
         "image": "/jouda-food.jpg",
         "layout": "mobile"
       },
       "inventory-system": {
         "title": "JoudaStock",
         "category": "Business Management Platform",
-        "description": "Developing a comprehensive system for managing inventory, employees, and finances, fully integrated and synchronized in real-time with the JoudaFood platform to streamline operations.",
+        "description": "Multi-branch business engine managing 3 warehouses, branch staff, and real-time stock sync with idempotent cash transactions and audit trails.",
         "image": "/inventory-dashboard.jpg",
         "layout": "mobile"
       },
       "malware-analysis": {
         "title": "Securefusion",
         "category": "Cybersecurity Project",
-        "description": "Developing a project to analyze malware and study its behavior using cybersecurity methodologies to help understand digital threats.",
+        "description": "Cybersecurity research platform for static and dynamic malware behavior analysis, threat intelligence mapping, and indicator of compromise (IOC) classification.",
         "layout": "desktop"
       },
       "masarcode": {
         "title": "MasarCode",
         "category": "Educational Platform",
-        "description": "An interactive roadmap and modern educational guide for Arab developers, focusing on readability and premium UX.",
+        "description": "Interactive engineering guide and technical roadmap platform for Arab developers, built with deep typography and high-density readability.",
         "image": "/masarcode.png",
         "layout": "desktop"
       },
       "asir": {
         "title": "Asir Store",
         "category": "Modern E-commerce",
-        "description": "A modern editorial-style e-commerce storefront supporting rapid purchasing and Progressive Web App (PWA) capabilities.",
+        "description": "High-performance editorial e-commerce storefront with instantaneous cart transactions, fluid typography, and PWA capabilities.",
         "image": "/asir.png",
         "layout": "desktop"
       }
@@ -417,5 +418,13 @@
       "outcome": "An elegant, ready-to-use storefront that highlights premium products and boosts conversion rates through a frictionless checkout experience.",
       "lessons": "The importance of typography and whitespace in showcasing premium products, and how PWAs can often replace the need for native apps."
     }
+  },
+  "contact": {
+    "title": "Contact & Availability",
+    "subtitle": "Available for high-impact frontend engineering contracts, resilient business systems, and remote roles.",
+    "whatsappCta": "Discuss a Project on WhatsApp",
+    "emailCta": "mohammednaji.dev@gmail.com",
+    "timezone": "Based in Yemen (UTC+3) • Open to clients & teams worldwide",
+    "status": "Currently accepting new projects for Q3/Q4"
   }
 }

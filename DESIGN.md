@@ -26,7 +26,7 @@ typography:
     lineHeight: 1.6
     letterSpacing: "0"
   arabic:
-    fontFamily: "Rubik Arabic, sans-serif"
+    fontFamily: "Beiruti, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 400
     lineHeight: 1.7
@@ -65,7 +65,7 @@ The palette is restricted to pure monochromatic values.
 ## 3. Typography
 
 **Display Font:** Inter (with sans-serif fallback)  
-**Arabic Font:** Rubik Arabic (with sans-serif fallback)
+**Arabic Font:** Beiruti (with sans-serif fallback)
 
 **Character:** Typography is the *only* UI. It must be perfect. We use lighter font weights (400) for headlines instead of heavy bolding to maintain an elegant, understated look.
 

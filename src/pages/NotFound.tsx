@@ -1,5 +1,5 @@
 
-import { Button } from '../components/ui/Button';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -9,14 +9,17 @@ export function NotFound() {
 
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center px-6 text-center">
-      <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-primary-500 to-accent-purple mb-4">404</h1>
-      <h2 className="text-3xl font-bold text-white mb-4">{t('notfound.subtitle')}</h2>
-      <p className="text-slate-400 mb-8 max-w-md">
+      <h1 className="text-8xl sm:text-9xl font-light text-app-text tracking-tighter mb-4">404</h1>
+      <h2 className="text-2xl sm:text-3xl font-normal text-app-text mb-4">{t('notfound.subtitle')}</h2>
+      <p className="text-app-muted mb-8 max-w-md text-base leading-relaxed">
         {t('notfound.desc')}
       </p>
-      <Button to="/" variant="primary">
-        {isRtl ? <ArrowRight size={18} /> : <ArrowLeft size={18} />} {t('notfound.return')}
-      </Button>
+      <Link 
+        to="/" 
+        className="inline-flex items-center gap-2 text-sm text-app-text border-b border-app-text pb-0.5 hover:text-app-muted hover:border-app-muted transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
+      >
+        {isRtl ? <ArrowRight size={16} /> : <ArrowLeft size={16} />} {t('notfound.return')}
+      </Link>
     </div>
   );
 }

@@ -68,7 +68,7 @@ function App() {
         >
           <button
             onClick={toggleTheme}
-            className="flex items-center justify-center rounded-full bg-app-card/80 backdrop-blur-md border border-app-border/50 text-app-muted shadow-xl transition-all active:scale-95 size-11 sm:size-12 hover:text-app-text hover:border-app-muted hover:bg-app-card focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50"
+            className="flex items-center justify-center rounded-full bg-app-card/80 backdrop-blur-md border border-app-border/50 text-app-muted shadow-xl transition-all active:scale-95 size-11 sm:size-12 hover:text-app-text hover:border-app-muted hover:bg-app-card focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
             aria-label="Toggle Theme"
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
           >
@@ -77,7 +77,7 @@ function App() {
 
           <button
             onClick={toggleLanguage}
-            className="flex items-center justify-center rounded-full bg-app-card/80 backdrop-blur-md border border-app-border/50 text-app-muted shadow-xl transition-all active:scale-95 size-11 sm:size-12 hover:text-app-text hover:border-app-muted hover:bg-app-card focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50"
+            className="flex items-center justify-center rounded-full bg-app-card/80 backdrop-blur-md border border-app-border/50 text-app-muted shadow-xl transition-all active:scale-95 size-11 sm:size-12 hover:text-app-text hover:border-app-muted hover:bg-app-card focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
             aria-label="Toggle Language"
             title={i18n.language === 'ar' ? 'English' : 'العربية'}
           >

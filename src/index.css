@@ -1,26 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); /* impeccable-disable-line overused-font -- documented brand typography */
 @import "tailwindcss";
 
 :root {
-  --app-bg: #161616;
-  --app-card: #1E1E1E;
-  --app-border: #2D2D2D;
-  --app-text: #EDEDED;
+  --app-bg: #000000;
+  --app-card: #0a0a0a;
+  --app-border: #262626;
+  --app-text: #FFFFFF;
   --app-muted: #888888;
-  --app-scroll-track: #020617;
-  --app-scroll-thumb: #1e293b;
-  --app-scroll-hover: #38bdf8;
+  --app-scroll-track: #000000;
+  --app-scroll-thumb: #262626;
+  --app-scroll-hover: #525252;
 }
 
 :root.light {
-  --app-bg: #F9FAFB;
+  --app-bg: #FAFAFA;
   --app-card: #FFFFFF;
-  --app-border: #E2E8F0;
-  --app-text: #0F172A;
-  --app-muted: #475569;
-  --app-scroll-track: #f1f5f9;
-  --app-scroll-thumb: #cbd5e1;
-  --app-scroll-hover: #0284c7;
+  --app-border: #E5E5E5;
+  --app-text: #171717;
+  --app-muted: #737373;
+  --app-scroll-track: #F5F5F5;
+  --app-scroll-thumb: #D4D4D4;
+  --app-scroll-hover: #A3A3A3;
 }
 
 @theme {
@@ -54,7 +54,7 @@ html[lang="ar"] {
 }
 
 body {
-  @apply bg-app-bg text-app-text font-sans antialiased selection:bg-[#38bdf8]/30 selection:text-app-text min-h-screen;
+  @apply bg-app-bg text-app-text font-sans antialiased selection:bg-white/20 selection:text-white min-h-screen;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
@@ -78,7 +78,7 @@ body {
   background: var(--app-scroll-hover);
 }
 
-/* Minimalist Link Utilities with Electric Blue Accent */
+/* Minimalist Link Utilities */
 .link-underline {
   @apply border-b border-transparent transition-colors duration-200 hover:border-app-text hover:text-app-text;
 }
