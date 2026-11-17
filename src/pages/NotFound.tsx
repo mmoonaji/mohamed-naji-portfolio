@@ -1,25 +1,28 @@
-
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export function NotFound() {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.language === 'ar';
+  const BackChevron = isRtl ? ChevronRight : ChevronLeft;
 
   return (
-    <div className="min-h-[80vh] flex flex-col items-center justify-center px-6 text-center">
-      <h1 className="text-8xl sm:text-9xl font-light text-app-text tracking-tighter mb-4">404</h1>
-      <h2 className="text-2xl sm:text-3xl font-normal text-app-text mb-4">{t('notfound.subtitle')}</h2>
-      <p className="text-app-muted mb-8 max-w-md text-base leading-relaxed">
-        {t('notfound.desc')}
-      </p>
-      <Link 
-        to="/" 
-        className="inline-flex items-center gap-2 text-sm text-app-text border-b border-app-text pb-0.5 hover:text-app-muted hover:border-app-muted transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
-      >
-        {isRtl ? <ArrowRight size={16} /> : <ArrowLeft size={16} />} {t('notfound.return')}
-      </Link>
-    </div>
+    <main className="min-h-[85vh] flex items-center justify-center px-5">
+      <div className="w-full max-w-sm rounded-2xl bg-app-card border border-app-border p-8 text-center space-y-5">
+        <div className="text-6xl font-semibold text-app-text tracking-tight tabular-nums">404</div>
+        <div className="space-y-1.5">
+          <h1 className="text-xl font-semibold text-app-text">{t('notfound.subtitle')}</h1>
+          <p className="text-sm text-app-muted leading-relaxed">{t('notfound.desc')}</p>
+        </div>
+        <Link
+          to="/"
+          className="inline-flex items-center justify-center gap-1.5 w-full min-h-[46px] px-5 py-2.5 rounded-[14px] bg-app-accent-solid text-white text-sm font-semibold hover:opacity-90 active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+        >
+          <BackChevron className="size-4" aria-hidden="true" />
+          <span>{t('notfound.return')}</span>
+        </Link>
+      </div>
+    </main>
   );
 }

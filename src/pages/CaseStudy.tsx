@@ -10,7 +10,9 @@ import {
   TrendingUp, 
   CheckCircle2, 
   AlertTriangle,
-  Lightbulb
+  Lightbulb,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
 export function CaseStudy() {
@@ -43,22 +45,42 @@ export function CaseStudy() {
   const liveLinks = Array.isArray(study.liveLinks) ? study.liveLinks : (study.url ? [{ label: t('caseStudy.visit'), url: study.url }] : []);
   const lessons = Array.isArray(study.lessons) ? study.lessons : (study.lessons ? [study.lessons] : []);
 
+  const BackChevron = isRtl ? ChevronRight : ChevronLeft;
+
   return (
-    <article className="pt-24 pb-24 sm:pt-32">
+    <article className="pb-28 sm:pb-32">
+      {/* iOS Translucent Sticky Navigation Bar */}
+      <nav
+        className="sticky top-0 z-30 bg-app-bg/80 backdrop-blur-xl border-b border-app-border mb-8 sm:mb-12"
+        aria-label="Case study navigation"
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-3">
+          <Link
+            to="/#projects"
+            className="inline-flex items-center gap-0.5 min-h-[44px] py-2 text-sm font-medium text-app-accent hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+          >
+            <BackChevron className="size-4 shrink-0" aria-hidden="true" />
+            <span>{t('caseStudy.back')}</span>
+          </Link>
+
+          {id === 'jouda-food' && (
+            <Link
+              to="/pricing"
+              className="inline-flex items-center gap-1 min-h-[36px] px-3 py-1 rounded-full bg-app-accent/15 text-app-accent text-xs font-medium hover:bg-app-accent/25 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+            >
+              <span>{t('caseStudy.pricingCtaButton')}</span>
+              <ArrowUpRight className="size-3.5" aria-hidden="true" />
+            </Link>
+          )}
+        </div>
+      </nav>
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Navigation & Header */}
-        <header className="mb-12 sm:mb-16">
-          <Link 
-            to="/#projects" 
-            className="inline-flex items-center gap-1.5 min-h-[44px] py-2.5 px-2 -mx-2 text-sm font-normal text-app-muted hover:text-app-text transition-colors mb-8 active:scale-95 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
-          >
-            <span>{isRtl ? '→' : '←'}</span>
-            <span>{t('caseStudy.back')}</span>
-          </Link>
-          
+        <header className="mb-10 sm:mb-14">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-app-card border border-app-border text-app-muted">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-app-card border border-app-border text-app-muted">
               {study.category}
             </span>
             {study.period && (
@@ -396,20 +418,41 @@ export function CaseStudy() {
 
         </div>
         
+        {/* Direct link to Pricing & Scope Estimator for Joudah (no price numbers in case study) */}
+        {id === 'jouda-food' && (
+          <section className="mt-16 p-6 rounded-2xl bg-app-card border border-app-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <h2 className="text-base sm:text-lg font-medium text-app-text">
+                {t('caseStudy.pricingCtaTitle')}
+              </h2>
+              <p className="text-sm text-app-muted leading-relaxed">
+                {t('caseStudy.pricingCtaDesc')}
+              </p>
+            </div>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center justify-center gap-2 shrink-0 min-h-[46px] px-5 py-2.5 rounded-[14px] bg-app-accent-solid text-white text-sm font-semibold hover:opacity-90 active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+            >
+              <span>{t('caseStudy.pricingCtaButton')}</span>
+              <ArrowUpRight className="size-4" aria-hidden="true" />
+            </Link>
+          </section>
+        )}
+
         {/* Footer Navigation */}
         <footer className="mt-20 pt-10 border-t border-app-border flex flex-wrap justify-between items-center gap-6">
           <Link 
             to="/#projects" 
-            className="inline-flex items-center gap-2 min-h-[44px] py-2 px-2 -mx-2 text-base font-normal text-app-text link-underline active:scale-95 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
+            className="inline-flex items-center gap-1.5 min-h-[44px] py-2 px-2 -mx-2 text-base font-medium text-app-accent hover:opacity-80 active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
           >
-            <span>{isRtl ? '→' : '←'}</span>
+            <BackChevron className="size-4 shrink-0" aria-hidden="true" />
             <span>{t('caseStudy.return')}</span>
           </Link>
           <a 
             href={`https://wa.me/967770859270?text=${encodeURIComponent(isRtl ? `أهلاً محمد، اطلعت على دراسة حالة ${study.title} وأود مناقشة مشروع مشابه` : `Hi Mohamed, I read your case study for ${study.title} and would love to discuss a similar project`)}`}
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 min-h-[44px] px-5 py-2.5 rounded-xl bg-app-card hover:bg-app-border/50 border border-app-border text-sm font-medium text-app-text transition-all active:scale-95 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50 shadow-sm"
+            className="inline-flex items-center gap-2 min-h-[44px] px-5 py-2.5 rounded-[14px] bg-app-card hover:bg-app-tertiary/50 border border-app-border text-sm font-medium text-app-text transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
           >
             <span>{t('caseStudy.discussSimilar') || (isRtl ? 'ناقش مشروعاً مشابهاً' : 'Discuss a Similar Project')}</span>
             <ArrowUpRight className="size-4 text-app-muted" />

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { CaseStudy } from './pages/CaseStudy';
+import { Pricing } from './pages/Pricing';
 import { NotFound } from './pages/NotFound';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
@@ -42,42 +43,50 @@ function App() {
   };
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
   return (
     <Router>
-      <div className={`min-h-screen bg-app-bg text-app-text selection:bg-white/20 selection:text-white ${i18n.language === 'ar' ? 'font-arabic' : 'font-sans'}`} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
+      <div
+        className={`min-h-screen bg-app-bg text-app-text ${i18n.language === 'ar' ? 'font-arabic' : 'font-sans'}`}
+        dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}
+      >
         <div className="flex-grow">
           <MotionConfig reducedMotion="user">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/case-study/:id" element={<CaseStudy />} />
+              <Route path="/pricing" element={<Pricing />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </MotionConfig>
         </div>
-        
-        {/* Floating Toggles */}
-        <div 
-          className="fixed z-50 flex flex-col gap-3"
-          style={{ 
-            bottom: 'max(1.5rem, env(safe-area-inset-bottom))',
-            right: 'max(1.5rem, env(safe-area-inset-right))'
+
+        {/* iOS Liquid-Glass Floating Utility Capsule */}
+        <div
+          className="fixed z-50 inline-flex items-center rounded-full bg-app-card/85 backdrop-blur-xl border border-app-border shadow-lg p-1 gap-0.5"
+          style={{
+            bottom: 'max(1.25rem, env(safe-area-inset-bottom))',
+            right: 'max(1.25rem, env(safe-area-inset-right))',
           }}
         >
           <button
+            type="button"
             onClick={toggleTheme}
-            className="flex items-center justify-center rounded-full bg-app-card/80 backdrop-blur-md border border-app-border/50 text-app-muted shadow-xl transition-all active:scale-95 size-11 sm:size-12 hover:text-app-text hover:border-app-muted hover:bg-app-card focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+            className="flex items-center justify-center rounded-full text-app-muted hover:text-app-text hover:bg-app-tertiary/70 transition-colors active:scale-95 size-11 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             aria-label="Toggle Theme"
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
           >
-            {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+            {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
           </button>
 
+          <span className="h-5 w-px bg-app-border" aria-hidden="true" />
+
           <button
+            type="button"
             onClick={toggleLanguage}
-            className="flex items-center justify-center rounded-full bg-app-card/80 backdrop-blur-md border border-app-border/50 text-app-muted shadow-xl transition-all active:scale-95 size-11 sm:size-12 hover:text-app-text hover:border-app-muted hover:bg-app-card focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+            className="flex items-center justify-center rounded-full text-xs font-semibold text-app-accent hover:bg-app-tertiary/70 transition-colors active:scale-95 size-11 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             aria-label="Toggle Language"
             title={i18n.language === 'ar' ? 'English' : 'العربية'}
           >

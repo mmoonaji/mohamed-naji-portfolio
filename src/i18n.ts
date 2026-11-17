@@ -7,7 +7,7 @@ import translationAR from './locales/ar.json';
 
 const resources = {
   en: { translation: translationEN },
-  ar: { translation: translationAR }
+  ar: { translation: translationAR },
 };
 
 i18n
@@ -15,10 +15,17 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
+    fallbackLng: 'ar',
+    supportedLngs: ['ar', 'en'],
+    load: 'languageOnly',
+    detection: {
+      // Default to Arabic for first-time visitors while respecting ?lng= or saved preference
+      order: ['querystring', 'localStorage'],
+      caches: ['localStorage'],
+    },
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
-    }
+    },
   });
 
 export default i18n;

@@ -98,7 +98,8 @@
         "title": "Application Security",
         "description": "Analyzing applications, discovering security vulnerabilities, reviewing code quality, and contributing to building more secure and reliable software."
       }
-    ]
+    ],
+    "pricingLink": "View e-commerce & business system pricing packages"
   },
   "howWeWork": {
     "title": "How We Work Together",
@@ -251,19 +252,22 @@
     "outcome": "Impact & Results",
     "metrics": "Impact & Performance Metrics",
     "lessons": "What I Actually Learned",
-    "discussSimilar": "Discuss a Similar Project"
+    "discussSimilar": "Discuss a Similar Project",
+    "pricingCtaTitle": "Running a store and want an ecosystem like Joudah?",
+    "pricingCtaDesc": "Explore execution packages and estimate your project budget and timeline in under a minute.",
+    "pricingCtaButton": "Pricing & Scope Estimator"
   },
   "caseStudiesData": {
     "jouda-food": {
       "title": "Joudah — AI-Assisted Digital Product Ecosystem",
       "tagline": "An integrated digital ecosystem for celiac products, inventory & POS — built and continuously improved using AI-assisted engineering workflows.",
-      "url": "https://www.joduafood.com",
+      "url": "https://www.joudafood.com",
       "image": "/jouda-food.jpg",
       "layout": "mobile",
       "category": "Digital Product Ecosystem (E-Commerce & ERP)",
       "period": "2025 – 2026",
       "liveLinks": [
-        { "label": "Customer Storefront (JoudaFood)", "url": "https://www.joduafood.com" },
+        { "label": "Customer Storefront (JoudaFood)", "url": "https://www.joudafood.com" },
         { "label": "Warehouse & POS System (JoudaStock)", "url": "https://stock.joudafood.com" }
       ],
       "summary": "Joudah is a comprehensive digital ecosystem built for a local business serving people with celiac disease and dietary restrictions. I took full ownership of designing, building, and continuously maintaining all its digital systems for nearly a year using disciplined, AI-assisted development workflows.",
@@ -426,5 +430,152 @@
     "emailCta": "mohammednaji.dev@gmail.com",
     "timezone": "Based in Yemen (UTC+3) • Open to clients & teams worldwide",
     "status": "Currently accepting new projects for Q3/Q4"
+  },
+  "pricing": {
+    "backHome": "Home",
+    "viewJoudaCase": "Joudah Case Study",
+    "currencyLabel": "Select Currency",
+    "title": "Own Your Store — Zero Commissions",
+    "subtitle": "Fast, 100% client-owned storefront and admin system, engineered to the same production standards as Joudah.",
+    "recommendedBadge": "Best fit",
+    "startingFrom": "Starting from",
+    "deliveryLabel": "Delivery",
+    "includedTitle": "What's included",
+    "includedBadge": "Included",
+    "tiers": {
+      "starter": {
+        "name": "Launch",
+        "shortName": "Launch",
+        "audience": "For stores replacing messy manual WhatsApp orders.",
+        "features": [
+          "Fast mobile-first storefront that feels like a native app",
+          "Cart, discount coupons, and saved favorites",
+          "Admin dashboard for products, stock, and orders",
+          "Clean WhatsApp product share cards (image + price)"
+        ]
+      },
+      "growth": {
+        "name": "Growth",
+        "shortName": "Growth",
+        "audience": "For active stores streamlining delivery and repeat orders.",
+        "features": [
+          "Everything in Launch + map pin & auto delivery fee",
+          "Real-time customer order status notifications",
+          "SEO articles & recipes hub for Google traffic",
+          "One-tap reorder & bundle savings"
+        ]
+      },
+      "ecosystem": {
+        "name": "Full Ecosystem",
+        "shortName": "Ecosystem",
+        "audience": "For multi-branch operations at full Joudah & JoudaStock scale.",
+        "features": [
+          "Everything in Growth + Google Play Android app",
+          "Custom AI product checker & shopping assistant",
+          "Multi-warehouse & live POS counter sync",
+          "Team onboarding & full technical handover"
+        ]
+      }
+    },
+    "estimator": {
+      "step1": "Choose package",
+      "step2": "Add capabilities",
+      "buildTotal": "Estimated build (one-time)",
+      "timelineLabel": "Timeline",
+      "infraLabel": "Monthly hosting/DB",
+      "weeksUnit": "weeks",
+      "monthUnit": "mo",
+      "reassurance": "Planning estimate — fixed quote after a quick chat · 30-day warranty",
+      "whatsappCta": "Send This Estimate on WhatsApp"
+    },
+    "addons": {
+      "items": {
+        "androidApp": {
+          "title": "Android App (Google Play)",
+          "desc": "Native app with camera, geolocation, and push alerts."
+        },
+        "aiAssistant": {
+          "title": "AI Shopping / Product Assistant",
+          "desc": "Camera product scanner or guided chat for shoppers."
+        },
+        "multiBranchPos": {
+          "title": "POS Terminal & Multi-Warehouse",
+          "desc": "Real-time cashier & warehouse sync with staff roles."
+        },
+        "bilingual": {
+          "title": "Bilingual Storefront (AR + EN)",
+          "desc": "Full RTL/LTR switching across storefront and admin."
+        },
+        "catalogSetup": {
+          "title": "Initial Catalog Setup",
+          "desc": "Image prep and entry for up to 60 products before launch."
+        }
+      }
+    },
+    "infra": {
+      "title": "Monthly Hosting & Database Costs",
+      "subtitle": "All cloud accounts are registered directly in your name with zero markup:",
+      "items": [
+        {
+          "service": "Database & Media Storage (Supabase Pro)",
+          "role": "24/7 PostgreSQL, daily backups, and 100GB media storage",
+          "cost": "$25 / mo"
+        },
+        {
+          "service": "Web Hosting (Vercel / Commercial Host)",
+          "role": "Global edge speed and rich WhatsApp/SEO previews",
+          "cost": "$0 – $20 / mo"
+        },
+        {
+          "service": "Custom Domain (.com)",
+          "role": "Your brand domain and automated SSL",
+          "cost": "~$12 – $15 / yr"
+        },
+        {
+          "service": "Maps & AI APIs (When enabled)",
+          "role": "Generous free tier first, then pay-as-you-go",
+          "cost": "$0 – $15 / mo"
+        }
+      ]
+    },
+    "comparison": {
+      "title": "Why Own Your System Instead of Renting Platforms?",
+      "items": [
+        {
+          "aspect": "Sales Commissions",
+          "custom": "0% — keep 100% of your margins",
+          "platforms": "Per-order cuts or extra gateway fees"
+        },
+        {
+          "aspect": "Code & Data Ownership",
+          "custom": "100% yours — code and customer DB",
+          "platforms": "Store stops if you stop paying rent"
+        },
+        {
+          "aspect": "Custom Capabilities",
+          "custom": "Unlimited (AI, POS, Android app)",
+          "platforms": "Locked into fixed templates & paid plugins"
+        }
+      ],
+      "customLabel": "Owned System",
+      "platformsLabel": "Rented Platforms"
+    },
+    "guarantees": {
+      "title": "Payment Terms & Warranty",
+      "items": [
+        {
+          "title": "Milestone Payments",
+          "desc": "40% kickoff, 30% staging preview, 30% on launch."
+        },
+        {
+          "title": "30-Day Bug-Fix Warranty",
+          "desc": "Free priority fixes during the first month after launch."
+        },
+        {
+          "title": "Full Handover & Training",
+          "desc": "Complete repo & cloud transfer plus short training videos."
+        }
+      ]
+    }
   }
 }
