@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -29,12 +29,11 @@ export function Home() {
 
   const socialLinks = [
     { href: 'https://github.com/mmoonaji', label: 'GitHub' },
-    { href: 'https://x.com/mmoonaji', label: 'X' },
     {
       href: 'https://wa.me/967770859270?text=Hi%20Mohamed,%20I%20would%20like%20to%20discuss%20a%20new%20project',
       label: 'WhatsApp',
     },
-    { href: 'mailto:mohammednaji.dev@gmail.com', label: 'Email' },
+    { href: 'mailto:mohanaje7@gmail.com', label: 'Email' },
   ];
 
   const services = (t('services.items', { returnObjects: true }) as any[]) || [];
@@ -59,10 +58,10 @@ export function Home() {
         </div>
 
         <div className="space-y-1.5">
-          <h1 className="text-2xl sm:text-3xl font-semibold text-app-text tracking-tight leading-tight">
+          <h1 className="text-2xl sm:text-3xl font-normal text-app-text tracking-tight leading-tight">
             {t('hero.name')}
           </h1>
-          <p className="text-sm sm:text-base text-app-muted font-normal max-w-md">
+          <p className="text-sm sm:text-base text-app-muted font-light max-w-md">
             {t('hero.title')}
           </p>
         </div>
@@ -80,7 +79,7 @@ export function Home() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 min-h-[40px] px-3.5 py-1.5 rounded-full bg-app-card border border-app-border text-xs sm:text-sm font-medium text-app-text hover:border-app-accent hover:text-app-accent active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+              className="inline-flex items-center gap-1 min-h-[40px] px-3.5 py-1.5 rounded-full bg-app-card border border-app-border text-xs sm:text-sm font-normal text-app-text hover:border-app-accent hover:text-app-accent active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             >
               <span>{link.label}</span>
               <ArrowUpRight className="size-3.5 opacity-60" aria-hidden="true" />
@@ -96,7 +95,7 @@ export function Home() {
         transition={{ duration: 0.28, delay: 0.05 }}
         className="space-y-2.5"
       >
-        <h2 className="px-3 text-xs font-semibold uppercase tracking-wider text-app-muted">
+        <h2 className="px-3 text-xs font-normal uppercase tracking-wider text-app-muted">
           {t('about.title')}
         </h2>
         <div className="rounded-2xl bg-app-card border border-app-border p-4 sm:p-5 space-y-3 text-sm sm:text-base text-app-muted leading-relaxed text-pretty">
@@ -115,7 +114,7 @@ export function Home() {
         id="projects"
       >
         <div className="flex items-baseline justify-between px-3">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-app-muted">
+          <h2 className="text-xs font-normal uppercase tracking-wider text-app-muted">
             {t('projects.title')}
           </h2>
           <span className="text-xs text-app-muted">{t('projects.count')}</span>
@@ -130,7 +129,7 @@ export function Home() {
             >
               <div className="flex flex-col gap-1 min-w-0">
                 <div className="flex flex-wrap items-baseline gap-2">
-                  <h3 className="text-base font-semibold text-app-text group-hover:text-app-accent transition-colors">
+                  <h3 className="text-base font-normal text-app-text group-hover:text-app-accent transition-colors">
                     {project.title}
                   </h3>
                   <span className="text-xs text-app-muted">{project.category}</span>
@@ -155,14 +154,14 @@ export function Home() {
         transition={{ duration: 0.28, delay: 0.15 }}
         className="space-y-2.5"
       >
-        <h2 className="px-3 text-xs font-semibold uppercase tracking-wider text-app-muted">
+        <h2 className="px-3 text-xs font-normal uppercase tracking-wider text-app-muted">
           {t('services.title')}
         </h2>
 
         <div className="rounded-2xl bg-app-card border border-app-border divide-y divide-app-border overflow-hidden">
           {services.map((service, idx) => (
             <div key={idx} className="px-4 py-3.5 sm:px-5 space-y-1">
-              <h3 className="text-sm sm:text-base font-medium text-app-text">{service.title}</h3>
+              <h3 className="text-sm sm:text-base font-normal text-app-text">{service.title}</h3>
               <p className="text-xs sm:text-sm text-app-muted leading-relaxed text-pretty">
                 {service.description}
               </p>
@@ -171,7 +170,7 @@ export function Home() {
 
           <Link
             to="/pricing"
-            className="flex items-center justify-between gap-3 px-4 py-3.5 sm:px-5 min-h-[50px] text-sm font-medium text-app-accent hover:bg-app-tertiary/40 active:bg-app-tertiary/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-app-accent"
+            className="flex items-center justify-between gap-3 px-4 py-3.5 sm:px-5 min-h-[50px] text-sm font-normal text-app-accent hover:bg-app-tertiary/40 active:bg-app-tertiary/70 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-app-accent"
           >
             <span>{t('services.pricingLink')}</span>
             <DisclosureChevron className="size-4 shrink-0" aria-hidden="true" />
@@ -187,7 +186,7 @@ export function Home() {
         className="space-y-2.5"
         id="contact"
       >
-        <h2 className="px-3 text-xs font-semibold uppercase tracking-wider text-app-muted">
+        <h2 className="px-3 text-xs font-normal uppercase tracking-wider text-app-muted">
           {t('contact.title')}
         </h2>
 
@@ -201,14 +200,14 @@ export function Home() {
               href={t('hero.whatsappUrl')}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-2 min-h-[48px] px-4 py-2.5 rounded-[14px] bg-app-accent-solid text-white text-sm font-semibold hover:opacity-90 active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+              className="flex-1 inline-flex items-center justify-center gap-2 min-h-[48px] px-4 py-2.5 rounded-[14px] bg-app-accent-solid text-white text-sm font-normal hover:opacity-90 active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             >
               <span>{t('contact.whatsappCta')}</span>
               <ArrowUpRight className="size-4" aria-hidden="true" />
             </a>
             <a
-              href="mailto:mohammednaji.dev@gmail.com"
-              className="inline-flex items-center justify-center gap-1.5 min-h-[48px] px-4 py-2.5 rounded-[14px] bg-app-tertiary/80 text-app-text text-sm font-medium hover:bg-app-tertiary active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+              href="mailto:mohanaje7@gmail.com"
+              className="inline-flex items-center justify-center gap-1.5 min-h-[48px] px-4 py-2.5 rounded-[14px] bg-app-tertiary/80 text-app-text text-sm font-normal hover:bg-app-tertiary active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             >
               <span>{t('contact.emailCta')}</span>
             </a>

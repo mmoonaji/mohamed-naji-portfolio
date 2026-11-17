@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+﻿import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -125,7 +125,7 @@ export function Pricing() {
           <div className="flex items-center gap-3 min-w-0">
             <Link
               to="/"
-              className="inline-flex items-center gap-0.5 min-h-[44px] py-2 text-sm font-medium text-app-accent hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+              className="inline-flex items-center gap-0.5 min-h-[44px] py-2 text-sm font-normal text-app-accent hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             >
               <BackChevron className="size-4 shrink-0" aria-hidden="true" />
               <span>{t('pricing.backHome')}</span>
@@ -151,7 +151,7 @@ export function Pricing() {
                 type="button"
                 onClick={() => setCurrency(code)}
                 aria-pressed={currency === code}
-                className={`min-h-[34px] px-2.5 py-1 rounded-[8px] text-xs font-medium transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent ${
+                className={`min-h-[34px] px-2.5 py-1 rounded-[8px] text-xs font-normal transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent ${
                   currency === code
                     ? 'bg-app-card text-app-text shadow-sm'
                     : 'text-app-muted hover:text-app-text'
@@ -172,7 +172,7 @@ export function Pricing() {
           transition={{ duration: 0.25 }}
           className="space-y-2"
         >
-          <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-app-text leading-snug text-balance">
+          <h1 className="text-2xl sm:text-3xl font-normal tracking-tight text-app-text leading-snug text-balance">
             {t('pricing.title')}
           </h1>
           <p className="text-sm sm:text-base text-app-muted leading-relaxed text-pretty">
@@ -183,7 +183,7 @@ export function Pricing() {
         {/* 1. iOS Segmented Package Switcher */}
         <section aria-label={t('pricing.estimator.step1')} className="space-y-3">
           <div className="flex items-center justify-between px-1 text-xs text-app-muted">
-            <span className="font-semibold uppercase tracking-wider">{t('pricing.estimator.step1')}</span>
+            <span className="font-normal uppercase tracking-wider">{t('pricing.estimator.step1')}</span>
             <span className="tabular-nums">
               {t('pricing.deliveryLabel')}: {estimate.tier.minWeeks}–{estimate.tier.maxWeeks}{' '}
               {t('pricing.estimator.weeksUnit')}
@@ -211,15 +211,15 @@ export function Pricing() {
                   }`}
                 >
                   <div className="flex items-center justify-center gap-1">
-                    <span className="text-xs sm:text-sm font-semibold leading-tight">
+                    <span className="text-xs sm:text-sm font-normal leading-tight">
                       {t(`pricing.tiers.${tier.id}.shortName`)}
                     </span>
                     {tier.recommended && (
-                      <span className="text-xs font-medium text-app-accent leading-none">•</span>
+                      <span className="text-xs font-normal text-app-accent leading-none">•</span>
                     )}
                   </div>
                   <span
-                    className={`text-xs sm:text-sm font-medium tabular-nums pt-0.5 ${
+                    className={`text-xs sm:text-sm font-normal tabular-nums pt-0.5 ${
                       active ? 'text-app-accent' : 'text-app-muted'
                     }`}
                   >
@@ -237,7 +237,7 @@ export function Pricing() {
                 {t(`pricing.tiers.${selectedTier}.audience`)}
               </p>
               {estimate.tier.recommended && (
-                <span className="shrink-0 px-2.5 py-0.5 rounded-full bg-app-accent/15 text-app-accent text-xs font-medium">
+                <span className="shrink-0 px-2.5 py-0.5 rounded-full bg-app-accent/15 text-app-accent text-xs font-normal">
                   {t('pricing.recommendedBadge')}
                 </span>
               )}
@@ -256,7 +256,7 @@ export function Pricing() {
 
         {/* 2. Optional Add-ons with iOS Toggle Switches */}
         <section aria-label={t('pricing.estimator.step2')} className="space-y-2.5">
-          <h2 className="px-3 text-xs font-semibold uppercase tracking-wider text-app-muted">
+          <h2 className="px-3 text-xs font-normal uppercase tracking-wider text-app-muted">
             {t('pricing.estimator.step2')}
           </h2>
 
@@ -281,10 +281,10 @@ export function Pricing() {
                 >
                   <div className="space-y-0.5 min-w-0">
                     <div className="flex flex-wrap items-baseline gap-2">
-                      <span className="text-sm font-medium text-app-text leading-snug">
+                      <span className="text-sm font-normal text-app-text leading-snug">
                         {t(`pricing.addons.items.${addon.id}.title`)}
                       </span>
-                      <span className="text-xs font-medium text-app-accent tabular-nums">
+                      <span className="text-xs font-normal text-app-accent tabular-nums">
                         {included
                           ? t('pricing.includedBadge')
                           : `+${formatMoney(addon.priceUsd, currency, isRtl)}`}
@@ -321,7 +321,7 @@ export function Pricing() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs text-app-muted">{t('pricing.estimator.buildTotal')}</div>
-              <div className="text-3xl font-semibold tracking-tight text-app-text tabular-nums">
+              <div className="text-3xl font-normal tracking-tight text-app-text tabular-nums">
                 {t('pricing.startingFrom')} {formatMoney(estimate.totalUsd, currency, isRtl)}
               </div>
             </div>
@@ -329,14 +329,14 @@ export function Pricing() {
             <div className="flex items-center gap-5 text-xs text-app-muted tabular-nums">
               <div>
                 <span className="block opacity-80">{t('pricing.estimator.timelineLabel')}</span>
-                <span className="text-sm font-medium text-app-text">
+                <span className="text-sm font-normal text-app-text">
                   {estimate.minWeeks}–{estimate.maxWeeks} {t('pricing.estimator.weeksUnit')}
                 </span>
               </div>
               <div className="h-6 w-px bg-app-border" aria-hidden="true" />
               <div>
                 <span className="block opacity-80">{t('pricing.estimator.infraLabel')}</span>
-                <span className="text-sm font-medium text-app-text">
+                <span className="text-sm font-normal text-app-text">
                   ~${estimate.infraMinUsd}–${estimate.infraMaxUsd}/{t('pricing.estimator.monthUnit')}
                 </span>
               </div>
@@ -348,7 +348,7 @@ export function Pricing() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full min-h-[50px] inline-flex items-center justify-center gap-2 px-5 py-3 rounded-[14px] bg-app-accent-solid text-white text-sm font-semibold hover:opacity-90 active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+              className="w-full min-h-[50px] inline-flex items-center justify-center gap-2 px-5 py-3 rounded-[14px] bg-app-accent-solid text-white text-sm font-normal hover:opacity-90 active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             >
               <span>{t('pricing.estimator.whatsappCta')}</span>
               <ArrowUpRight className="size-4" aria-hidden="true" />
@@ -362,7 +362,7 @@ export function Pricing() {
         {/* 4. Inset Grouped Disclosures (Infra, Comparison, Warranty) */}
         <section aria-label="Details" className="rounded-2xl bg-app-card border border-app-border divide-y divide-app-border overflow-hidden">
           <details className="group">
-            <summary className="flex items-center justify-between gap-4 min-h-[52px] px-4 py-3.5 sm:px-5 text-sm font-medium text-app-text cursor-pointer list-none select-none hover:bg-app-tertiary/30 transition-colors">
+            <summary className="flex items-center justify-between gap-4 min-h-[52px] px-4 py-3.5 sm:px-5 text-sm font-normal text-app-text cursor-pointer list-none select-none hover:bg-app-tertiary/30 transition-colors">
               <span>{t('pricing.infra.title')}</span>
               <ChevronDown
                 className="size-4 text-app-muted shrink-0 transition-transform duration-200 group-open:rotate-180"
@@ -377,12 +377,12 @@ export function Pricing() {
                 {infraItems.map((item, idx) => (
                   <div key={idx} className="py-2.5 flex items-start justify-between gap-4 text-sm">
                     <div className="space-y-0.5">
-                      <div className="text-app-text font-medium text-xs sm:text-sm">
+                      <div className="text-app-text font-normal text-xs sm:text-sm">
                         {item.service}
                       </div>
                       <div className="text-xs text-app-muted">{item.role}</div>
                     </div>
-                    <span className="shrink-0 text-xs sm:text-sm font-medium text-app-text tabular-nums">
+                    <span className="shrink-0 text-xs sm:text-sm font-normal text-app-text tabular-nums">
                       {item.cost}
                     </span>
                   </div>
@@ -392,7 +392,7 @@ export function Pricing() {
           </details>
 
           <details className="group">
-            <summary className="flex items-center justify-between gap-4 min-h-[52px] px-4 py-3.5 sm:px-5 text-sm font-medium text-app-text cursor-pointer list-none select-none hover:bg-app-tertiary/30 transition-colors">
+            <summary className="flex items-center justify-between gap-4 min-h-[52px] px-4 py-3.5 sm:px-5 text-sm font-normal text-app-text cursor-pointer list-none select-none hover:bg-app-tertiary/30 transition-colors">
               <span>{t('pricing.comparison.title')}</span>
               <ChevronDown
                 className="size-4 text-app-muted shrink-0 transition-transform duration-200 group-open:rotate-180"
@@ -402,9 +402,9 @@ export function Pricing() {
             <div className="px-4 pb-4 sm:px-5 sm:pb-5 divide-y divide-app-border/60 border-t border-app-border/60">
               {comparisonItems.map((row, idx) => (
                 <div key={idx} className="py-3 space-y-1.5 text-xs sm:text-sm">
-                  <div className="font-medium text-app-text">{row.aspect}</div>
+                  <div className="font-normal text-app-text">{row.aspect}</div>
                   <div className="text-app-text">
-                    <span className="text-app-accent font-medium">{t('pricing.comparison.customLabel')}: </span>
+                    <span className="text-app-accent font-normal">{t('pricing.comparison.customLabel')}: </span>
                     {row.custom}
                   </div>
                   <div className="text-app-muted">
@@ -417,7 +417,7 @@ export function Pricing() {
           </details>
 
           <details className="group">
-            <summary className="flex items-center justify-between gap-4 min-h-[52px] px-4 py-3.5 sm:px-5 text-sm font-medium text-app-text cursor-pointer list-none select-none hover:bg-app-tertiary/30 transition-colors">
+            <summary className="flex items-center justify-between gap-4 min-h-[52px] px-4 py-3.5 sm:px-5 text-sm font-normal text-app-text cursor-pointer list-none select-none hover:bg-app-tertiary/30 transition-colors">
               <span>{t('pricing.guarantees.title')}</span>
               <ChevronDown
                 className="size-4 text-app-muted shrink-0 transition-transform duration-200 group-open:rotate-180"
@@ -427,7 +427,7 @@ export function Pricing() {
             <div className="px-4 pb-4 sm:px-5 sm:pb-5 space-y-3 border-t border-app-border/60 pt-3">
               {guarantees.map((item, idx) => (
                 <div key={idx} className="space-y-0.5 text-xs sm:text-sm">
-                  <div className="font-medium text-app-text">{item.title}</div>
+                  <div className="font-normal text-app-text">{item.title}</div>
                   <p className="text-app-muted leading-relaxed">{item.desc}</p>
                 </div>
               ))}

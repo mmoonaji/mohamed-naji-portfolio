@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+﻿import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -30,8 +30,8 @@ export function CaseStudy() {
   if (!study || !study.title) {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center px-6 text-center">
-        <h2 className="text-2xl font-normal text-app-text mb-6">{t('caseStudy.notFound')}</h2>
-        <Link to="/#projects" className="text-lg font-normal text-app-text link-underline pb-0.5">
+        <h2 className="text-2xl font-light text-app-text mb-6">{t('caseStudy.notFound')}</h2>
+        <Link to="/#projects" className="text-lg font-light text-app-text link-underline pb-0.5">
           {isRtl ? '↖' : '↗'} {t('caseStudy.return')}
         </Link>
       </div>
@@ -57,7 +57,7 @@ export function CaseStudy() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-3">
           <Link
             to="/#projects"
-            className="inline-flex items-center gap-0.5 min-h-[44px] py-2 text-sm font-medium text-app-accent hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+            className="inline-flex items-center gap-0.5 min-h-[44px] py-2 text-sm font-normal text-app-accent hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
           >
             <BackChevron className="size-4 shrink-0" aria-hidden="true" />
             <span>{t('caseStudy.back')}</span>
@@ -66,7 +66,7 @@ export function CaseStudy() {
           {id === 'jouda-food' && (
             <Link
               to="/pricing"
-              className="inline-flex items-center gap-1 min-h-[36px] px-3 py-1 rounded-full bg-app-accent/15 text-app-accent text-xs font-medium hover:bg-app-accent/25 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+              className="inline-flex items-center gap-1 min-h-[36px] px-3 py-1 rounded-full bg-app-accent/15 text-app-accent text-xs font-normal hover:bg-app-accent/25 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             >
               <span>{t('caseStudy.pricingCtaButton')}</span>
               <ArrowUpRight className="size-3.5" aria-hidden="true" />
@@ -80,11 +80,11 @@ export function CaseStudy() {
         {/* Navigation & Header */}
         <header className="mb-10 sm:mb-14">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-app-card border border-app-border text-app-muted">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-normal bg-app-card border border-app-border text-app-muted">
               {study.category}
             </span>
             {study.period && (
-              <span className="text-xs text-app-muted font-medium">
+              <span className="text-xs text-app-muted font-normal">
                 {study.period}
               </span>
             )}
@@ -94,7 +94,7 @@ export function CaseStudy() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-app-text mb-4 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-app-text mb-4 leading-tight"
           >
             {study.title}
           </motion.h1>
@@ -104,7 +104,7 @@ export function CaseStudy() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.05 }}
-              className="text-base sm:text-lg text-app-muted leading-relaxed max-w-3xl mb-8 font-normal"
+              className="text-base sm:text-lg text-app-muted leading-relaxed max-w-3xl mb-8 font-light"
             >
               {study.tagline}
             </motion.p>
@@ -124,7 +124,7 @@ export function CaseStudy() {
                   href={link.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-app-text bg-app-card hover:bg-app-border/40 border border-app-border rounded-xl transition-all active:scale-95 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-normal text-app-text bg-app-card hover:bg-app-border/40 border border-app-border rounded-xl transition-all active:scale-95 focus:outline-none focus-visible:ring-1 focus-visible:ring-white/50"
                 >
                   <span>{link.label}</span>
                   <ArrowUpRight className="size-4 text-app-muted" />
@@ -187,10 +187,10 @@ export function CaseStudy() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 rounded-2xl bg-app-card/60 border border-app-border">
               {metrics.map((metric: { value: string; label: string; sub?: string }, idx: number) => (
                 <div key={idx} className="flex flex-col gap-1 text-start">
-                  <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-app-text font-mono">
+                  <div className="text-2xl sm:text-3xl font-normal tracking-tight text-app-text font-mono">
                     {metric.value}
                   </div>
-                  <div className="text-sm font-medium text-app-text">
+                  <div className="text-sm font-normal text-app-text">
                     {metric.label}
                   </div>
                   {metric.sub && (
@@ -210,11 +210,11 @@ export function CaseStudy() {
           {/* Executive Summary */}
           {study.summary && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12">
-              <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
                 <span>{t('caseStudy.summary')}</span>
               </h2>
               <div className="md:w-2/3">
-                <p className="text-base sm:text-lg text-app-muted leading-relaxed font-normal">
+                <p className="text-base sm:text-lg text-app-muted leading-relaxed font-light">
                   {study.summary}
                 </p>
               </div>
@@ -223,7 +223,7 @@ export function CaseStudy() {
 
           {/* The Problem */}
           <section className="flex flex-col md:flex-row gap-4 md:gap-12">
-            <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0">
+            <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0">
               {t('caseStudy.problem')}
             </h2>
             <div className="md:w-2/3 flex flex-col gap-4">
@@ -232,7 +232,7 @@ export function CaseStudy() {
               </p>
               {study.goal && (
                 <div className="p-4 rounded-xl bg-app-card/40 border border-app-border/70 mt-2">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-app-text block mb-1">
+                  <span className="text-xs font-normal uppercase tracking-wider text-app-text block mb-1">
                     {t('caseStudy.goal')}
                   </span>
                   <p className="text-sm sm:text-base text-app-muted leading-relaxed">
@@ -245,7 +245,7 @@ export function CaseStudy() {
 
           {/* My Role */}
           <section className="flex flex-col md:flex-row gap-4 md:gap-12">
-            <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0">
+            <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0">
               {t('caseStudy.role')}
             </h2>
             <div className="md:w-2/3">
@@ -258,14 +258,14 @@ export function CaseStudy() {
           {/* The Ecosystem / Subsystems (If Available) */}
           {ecosystem && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12">
-              <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
                 <Layers className="size-5 text-app-muted" />
                 <span>{t('caseStudy.theEcosystem')}</span>
               </h2>
               <div className="md:w-2/3 grid sm:grid-cols-2 gap-4">
                 {ecosystem.map((system: { title: string; desc: string }, idx: number) => (
                   <div key={idx} className="p-4 rounded-xl bg-app-card border border-app-border flex flex-col gap-2">
-                    <h3 className="text-sm font-semibold text-app-text">
+                    <h3 className="text-sm font-normal text-app-text">
                       {system.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-app-muted leading-relaxed">
@@ -280,18 +280,18 @@ export function CaseStudy() {
           {/* How I Built It / AI-Assisted Workflow (If Available) */}
           {workflow && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12">
-              <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
                 <Cpu className="size-5 text-app-muted" />
                 <span>{t('caseStudy.howIBuiltIt')}</span>
               </h2>
               <div className="md:w-2/3 flex flex-col gap-4">
                 {workflow.map((step: { step: string; title: string; desc: string }, idx: number) => (
                   <div key={idx} className="p-4 rounded-xl bg-app-card border border-app-border flex gap-4 items-start">
-                    <span className="font-mono text-xs font-bold text-app-text bg-app-border/40 px-2 py-1 rounded-md shrink-0">
+                    <span className="font-mono text-xs font-normal text-app-text bg-app-border/40 px-2 py-1 rounded-md shrink-0">
                       {step.step}
                     </span>
                     <div className="flex flex-col gap-1 min-w-0">
-                      <h3 className="text-sm sm:text-base font-semibold text-app-text">
+                      <h3 className="text-sm sm:text-base font-normal text-app-text">
                         {step.title}
                       </h3>
                       <p className="text-xs sm:text-sm text-app-muted leading-relaxed">
@@ -307,7 +307,7 @@ export function CaseStudy() {
           {/* The Solution & Features (If No Ecosystem) */}
           {study.solution && !ecosystem && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12">
-              <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0">
+              <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0">
                 {t('caseStudy.solution')}
               </h2>
               <div className="md:w-2/3 flex flex-col gap-6">
@@ -317,7 +317,7 @@ export function CaseStudy() {
                 
                 {study.features && study.features.length > 0 && (
                   <div>
-                    <h3 className="text-xs font-semibold text-app-text mb-3 uppercase tracking-wider">
+                    <h3 className="text-xs font-normal text-app-text mb-3 uppercase tracking-wider">
                       {t('caseStudy.features')}
                     </h3>
                     <ul className="flex flex-col gap-2">
@@ -337,7 +337,7 @@ export function CaseStudy() {
           {/* Design Decisions (If Available) */}
           {study.designDecisions && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12">
-              <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0">
+              <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0">
                 {t('caseStudy.designDecisions')}
               </h2>
               <div className="md:w-2/3">
@@ -351,7 +351,7 @@ export function CaseStudy() {
           {/* Engineering Challenges & Debugging */}
           {study.challenges && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12">
-              <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
                 <AlertTriangle className="size-5 text-amber-500" />
                 <span>{t('caseStudy.challenges')}</span>
               </h2>
@@ -367,25 +367,25 @@ export function CaseStudy() {
 
           {/* Outcome & Tech Stack */}
           <section className="flex flex-col md:flex-row gap-4 md:gap-12">
-            <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
+            <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
               <TrendingUp className="size-5 text-emerald-500" />
               <span>{t('caseStudy.outcome')}</span>
             </h2>
             <div className="md:w-2/3 flex flex-col gap-6">
-              <p className="text-base sm:text-lg text-app-text font-medium leading-relaxed">
+              <p className="text-base sm:text-lg text-app-text font-normal leading-relaxed">
                 {study.outcome}
               </p>
               
               {study.tech && (
                 <div className="pt-2">
-                  <h3 className="text-xs font-semibold text-app-muted mb-3 uppercase tracking-wider">
+                  <h3 className="text-xs font-normal text-app-muted mb-3 uppercase tracking-wider">
                     {t('caseStudy.tech')}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {(study.tech || []).map((tool: string, idx: number) => (
                       <span 
                         key={idx}
-                        className="px-3 py-1 rounded-lg text-xs font-medium bg-app-card border border-app-border text-app-text"
+                        className="px-3 py-1 rounded-lg text-xs font-normal bg-app-card border border-app-border text-app-text"
                       >
                         {tool}
                       </span>
@@ -399,7 +399,7 @@ export function CaseStudy() {
           {/* What I Learned */}
           {lessons.length > 0 && (
             <section className="flex flex-col md:flex-row gap-4 md:gap-12 border-t border-app-border pt-12">
-              <h2 className="text-lg sm:text-xl font-semibold text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
+              <h2 className="text-lg sm:text-xl font-normal text-app-text md:w-1/3 shrink-0 flex items-center gap-2">
                 <Lightbulb className="size-5 text-app-muted" />
                 <span>{t('caseStudy.lessons')}</span>
               </h2>
@@ -422,7 +422,7 @@ export function CaseStudy() {
         {id === 'jouda-food' && (
           <section className="mt-16 p-6 rounded-2xl bg-app-card border border-app-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="space-y-1">
-              <h2 className="text-base sm:text-lg font-medium text-app-text">
+              <h2 className="text-base sm:text-lg font-normal text-app-text">
                 {t('caseStudy.pricingCtaTitle')}
               </h2>
               <p className="text-sm text-app-muted leading-relaxed">
@@ -431,7 +431,7 @@ export function CaseStudy() {
             </div>
             <Link
               to="/pricing"
-              className="inline-flex items-center justify-center gap-2 shrink-0 min-h-[46px] px-5 py-2.5 rounded-[14px] bg-app-accent-solid text-white text-sm font-semibold hover:opacity-90 active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+              className="inline-flex items-center justify-center gap-2 shrink-0 min-h-[46px] px-5 py-2.5 rounded-[14px] bg-app-accent-solid text-white text-sm font-normal hover:opacity-90 active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             >
               <span>{t('caseStudy.pricingCtaButton')}</span>
               <ArrowUpRight className="size-4" aria-hidden="true" />
@@ -443,7 +443,7 @@ export function CaseStudy() {
         <footer className="mt-20 pt-10 border-t border-app-border flex flex-wrap justify-between items-center gap-6">
           <Link 
             to="/#projects" 
-            className="inline-flex items-center gap-1.5 min-h-[44px] py-2 px-2 -mx-2 text-base font-medium text-app-accent hover:opacity-80 active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+            className="inline-flex items-center gap-1.5 min-h-[44px] py-2 px-2 -mx-2 text-base font-normal text-app-accent hover:opacity-80 active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
           >
             <BackChevron className="size-4 shrink-0" aria-hidden="true" />
             <span>{t('caseStudy.return')}</span>
@@ -452,7 +452,7 @@ export function CaseStudy() {
             href={`https://wa.me/967770859270?text=${encodeURIComponent(isRtl ? `أهلاً محمد، اطلعت على دراسة حالة ${study.title} وأود مناقشة مشروع مشابه` : `Hi Mohamed, I read your case study for ${study.title} and would love to discuss a similar project`)}`}
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 min-h-[44px] px-5 py-2.5 rounded-[14px] bg-app-card hover:bg-app-tertiary/50 border border-app-border text-sm font-medium text-app-text transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+            className="inline-flex items-center gap-2 min-h-[44px] px-5 py-2.5 rounded-[14px] bg-app-card hover:bg-app-tertiary/50 border border-app-border text-sm font-normal text-app-text transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
           >
             <span>{t('caseStudy.discussSimilar') || (isRtl ? 'ناقش مشروعاً مشابهاً' : 'Discuss a Similar Project')}</span>
             <ArrowUpRight className="size-4 text-app-muted" />

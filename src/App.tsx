@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+﻿import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { CaseStudy } from './pages/CaseStudy';
 import { Pricing } from './pages/Pricing';
@@ -86,7 +86,7 @@ function App() {
           <button
             type="button"
             onClick={toggleLanguage}
-            className="flex items-center justify-center rounded-full text-xs font-semibold text-app-accent hover:bg-app-tertiary/70 transition-colors active:scale-95 size-11 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
+            className="flex items-center justify-center rounded-full text-xs font-normal text-app-accent hover:bg-app-tertiary/70 transition-colors active:scale-95 size-11 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-app-accent"
             aria-label="Toggle Language"
             title={i18n.language === 'ar' ? 'English' : 'العربية'}
           >
