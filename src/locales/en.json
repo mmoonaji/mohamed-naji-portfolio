@@ -21,10 +21,8 @@
   },
   "about": {
     "title": "About Me",
-    "p1": "Software and systems engineer with a background in cybersecurity. I specialize in designing and delivering production systems that balance high-throughput frontend performance with rigorous security architecture.",
-    "p2": "Over the past year, I held end-to-end production ownership of a live commercial ecosystem (Joudah & JoudaStock)—architecting a 3-warehouse inventory engine, offline-first POS workflows, and idempotent financial settlements serving +800 active celiac patients.",
-    "p3": "My technical practice fuses defensive software engineering, threat modeling, and modern AI-assisted workflows to ship resilient, scalable software with zero tolerance for fragility.",
-    "p4": "Available for high-impact frontend engineering contracts, business system architectures, and remote full-time opportunities worldwide.",
+    "p1": "I build fast e-commerce storefronts and secure business systems engineered for mobile reliability.",
+    "p2": "Built and operated the live Joudah & JoudaStock ecosystem from scratch: serving 800+ users with a 3-warehouse inventory engine and offline-ready POS.",
     "qualityNum": "Live E-commerce Project",
     "quality": "Jouda Food Platform",
     "secureTitle": "Connected Systems",
@@ -435,147 +433,110 @@
     "backHome": "Home",
     "viewJoudaCase": "Joudah Case Study",
     "currencyLabel": "Select Currency",
-    "title": "Own Your Store — Zero Commissions",
-    "subtitle": "Fast, 100% client-owned storefront and admin system, engineered to the same production standards as Joudah.",
-    "recommendedBadge": "Best fit",
+    "title": "Your Own Store, Tailored to Your Business",
+    "subtitle": "From a simple store for taking orders to an integrated sales and inventory system. Pick the starting point that fits you.",
+    "tiersSectionTitle": "Packages",
+    "recommendedBadge": "Best for active stores",
     "startingFrom": "Starting from",
-    "deliveryLabel": "Delivery",
-    "includedTitle": "What's included",
-    "includedBadge": "Included",
+    "weeksRangeLabel": "{{min}}–{{max}} weeks",
+    "weeksCountOne": "1 week",
+    "weeksCountTwo": "2 weeks",
+    "weeksCountPlural": "{{count}} weeks",
     "tiers": {
       "starter": {
         "name": "Launch",
-        "shortName": "Launch",
-        "audience": "For stores replacing messy manual WhatsApp orders.",
+        "description": "Start taking orders through your own store instead of scattered chats.",
         "features": [
-          "Fast mobile-first storefront that feels like a native app",
-          "Cart, discount coupons, and saved favorites",
-          "Admin dashboard for products, stock, and orders",
-          "Clean WhatsApp product share cards (image + price)"
-        ]
+          "Fast mobile-friendly storefront.",
+          "Shopping cart, favorites, and discount coupons.",
+          "Dashboard for products, stock, and orders.",
+          "Share products with images and prices on WhatsApp."
+        ],
+        "cta": "Choose Launch"
       },
       "growth": {
         "name": "Growth",
-        "shortName": "Growth",
-        "audience": "For active stores streamlining delivery and repeat orders.",
+        "description": "Streamline delivery, keep customers updated, and encourage repeat orders.",
         "features": [
-          "Everything in Launch + map pin & auto delivery fee",
-          "Real-time customer order status notifications",
-          "SEO articles & recipes hub for Google traffic",
-          "One-tap reorder & bundle savings"
-        ]
+          "Everything in Launch.",
+          "Map delivery pin and automatic fee calculation.",
+          "Automatic order status notifications.",
+          "Easy reordering and special offers.",
+          "SEO-friendly content pages."
+        ],
+        "cta": "Choose Growth"
       },
       "ecosystem": {
         "name": "Full Ecosystem",
-        "shortName": "Ecosystem",
-        "audience": "For multi-branch operations at full Joudah & JoudaStock scale.",
+        "description": "Your store, inventory, and POS in one connected system built to scale.",
         "features": [
-          "Everything in Growth + Google Play Android app",
-          "Custom AI product checker & shopping assistant",
-          "Multi-warehouse & live POS counter sync",
-          "Team onboarding & full technical handover"
-        ]
+          "Everything in Growth.",
+          "Android app.",
+          "Smart AI assistant for shoppers.",
+          "POS and multi-warehouse sync.",
+          "Team training and full handover."
+        ],
+        "cta": "Discuss Your Project"
       }
     },
     "estimator": {
-      "step1": "Choose package",
-      "step2": "Add capabilities",
-      "buildTotal": "Estimated build (one-time)",
-      "timelineLabel": "Timeline",
-      "infraLabel": "Monthly hosting/DB",
-      "weeksUnit": "weeks",
-      "monthUnit": "mo",
-      "reassurance": "Planning estimate — fixed quote after a quick chat · 30-day warranty",
-      "whatsappCta": "Send This Estimate on WhatsApp"
+      "title": "Cost & Timeline Estimator",
+      "subtitle": "Select a base package and pick the add-ons your business needs to see an estimate before reaching out.",
+      "step1": "1. Base Package",
+      "step2": "2. Optional Add-ons",
+      "includedNote": "Already included in {{tierName}}:",
+      "summaryTitle": "Estimate Summary",
+      "buildTotal": "Estimated project cost",
+      "timelineLabel": "Estimated timeline",
+      "timelineRange": "{{min}}–{{max}} weeks (estimated)",
+      "disclaimer": "Final pricing and delivery timeline are confirmed after reviewing your exact scope.",
+      "whatsappCta": "Request a Quote on WhatsApp"
     },
     "addons": {
       "items": {
         "androidApp": {
-          "title": "Android App (Google Play)",
-          "desc": "Native app with camera, geolocation, and push alerts."
+          "title": "Android App",
+          "desc": "Mobile app connected to your store and ready to publish."
         },
         "aiAssistant": {
-          "title": "AI Shopping / Product Assistant",
-          "desc": "Camera product scanner or guided chat for shoppers."
+          "title": "Smart Customer Assistant",
+          "desc": "Answers shopper questions and recommends matching products."
         },
         "multiBranchPos": {
-          "title": "POS Terminal & Multi-Warehouse",
-          "desc": "Real-time cashier & warehouse sync with staff roles."
+          "title": "POS & Multi-Warehouse",
+          "desc": "Connects cashier counters and stockrooms with live stock updates."
         },
         "bilingual": {
-          "title": "Bilingual Storefront (AR + EN)",
-          "desc": "Full RTL/LTR switching across storefront and admin."
+          "title": "Arabic & English Store",
+          "desc": "Seamless language switching for shoppers and admin staff."
         },
         "catalogSetup": {
-          "title": "Initial Catalog Setup",
-          "desc": "Image prep and entry for up to 60 products before launch."
+          "title": "Setup for up to {{count}} products",
+          "desc": "Image prep, categories, and product entry before launch."
         }
       }
     },
-    "infra": {
-      "title": "Monthly Hosting & Database Costs",
-      "subtitle": "All cloud accounts are registered directly in your name with zero markup:",
+    "faq": {
+      "title": "Frequently Asked Questions",
       "items": [
         {
-          "service": "Database & Media Storage (Supabase Pro)",
-          "role": "24/7 PostgreSQL, daily backups, and 100GB media storage",
-          "cost": "$25 / mo"
+          "q": "Are there monthly costs?",
+          "a": "Yes, hosting, database, and third-party services have separate running costs. We clarify them before starting based on your store's needs."
         },
         {
-          "service": "Web Hosting (Vercel / Commercial Host)",
-          "role": "Global edge speed and rich WhatsApp/SEO previews",
-          "cost": "$0 – $20 / mo"
+          "q": "Do I own the store?",
+          "a": "Yes, you receive the system, data, and agreed handover rights in the contract, with zero commission on your sales."
         },
         {
-          "service": "Custom Domain (.com)",
-          "role": "Your brand domain and automated SSL",
-          "cost": "~$12 – $15 / yr"
-        },
-        {
-          "service": "Maps & AI APIs (When enabled)",
-          "role": "Generous free tier first, then pay-as-you-go",
-          "cost": "$0 – $15 / mo"
+          "q": "How do payments and warranty work?",
+          "a": "40% at project kickoff, 30% on staging completion, and 30% on final delivery. Includes 30-day bug fixes within the agreed scope."
         }
       ]
     },
-    "comparison": {
-      "title": "Why Own Your System Instead of Renting Platforms?",
-      "items": [
-        {
-          "aspect": "Sales Commissions",
-          "custom": "0% — keep 100% of your margins",
-          "platforms": "Per-order cuts or extra gateway fees"
-        },
-        {
-          "aspect": "Code & Data Ownership",
-          "custom": "100% yours — code and customer DB",
-          "platforms": "Store stops if you stop paying rent"
-        },
-        {
-          "aspect": "Custom Capabilities",
-          "custom": "Unlimited (AI, POS, Android app)",
-          "platforms": "Locked into fixed templates & paid plugins"
-        }
-      ],
-      "customLabel": "Owned System",
-      "platformsLabel": "Rented Platforms"
-    },
-    "guarantees": {
-      "title": "Payment Terms & Warranty",
-      "items": [
-        {
-          "title": "Milestone Payments",
-          "desc": "40% kickoff, 30% staging preview, 30% on launch."
-        },
-        {
-          "title": "30-Day Bug-Fix Warranty",
-          "desc": "Free priority fixes during the first month after launch."
-        },
-        {
-          "title": "Full Handover & Training",
-          "desc": "Complete repo & cloud transfer plus short training videos."
-        }
-      ]
+    "finalCta": {
+      "title": "Need custom requirements?",
+      "subtitle": "Let's discuss your needs and define the right solution and budget.",
+      "button": "Get in Touch to Discuss"
     }
   }
 }
