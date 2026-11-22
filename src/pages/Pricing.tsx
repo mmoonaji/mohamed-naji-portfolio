@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from 'react';
+﻿import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -66,12 +66,15 @@ export function Pricing() {
     return t('pricing.weeksCountPlural', { count: weeks });
   };
 
-  const getAddonTitle = (addonId: AddonId, productLimit?: number): string => {
-    if (addonId === 'catalogSetup' && productLimit !== undefined) {
-      return t(`pricing.addons.items.${addonId}.title`, { count: productLimit });
-    }
-    return t(`pricing.addons.items.${addonId}.title`);
-  };
+  const getAddonTitle = useCallback(
+    (addonId: AddonId, productLimit?: number): string => {
+      if (addonId === 'catalogSetup' && productLimit !== undefined) {
+        return t(`pricing.addons.items.${addonId}.title`, { count: productLimit });
+      }
+      return t(`pricing.addons.items.${addonId}.title`);
+    },
+    [t]
+  );
 
   const whatsappQuoteUrl = useMemo(() => {
     const tierName = t(`pricing.tiers.${selectedTier}.name`);
@@ -91,7 +94,7 @@ export function Pricing() {
       timelineText,
       isRtl,
     });
-  }, [selectedTier, estimate, currency, isRtl, t]);
+  }, [selectedTier, estimate, currency, isRtl, t, getAddonTitle]);
 
   const directConsultationUrl = useMemo(
     () => buildDirectConsultationWhatsAppUrl(isRtl),
